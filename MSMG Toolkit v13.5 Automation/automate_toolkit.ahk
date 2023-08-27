@@ -13,7 +13,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, 2
 
-Run "E:\\00_Toolkit_v13.5\\Start.cmd"
+Run ".\\MSMG Toolkit v13.5\\Start.cmd"
 Sleep, 4000
 
 WinWait, :  MSMG Toolkit v13.5,,30
