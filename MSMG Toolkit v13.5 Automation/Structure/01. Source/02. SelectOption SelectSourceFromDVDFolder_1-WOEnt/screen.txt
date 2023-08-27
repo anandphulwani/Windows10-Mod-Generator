@@ -1,0 +1,24 @@
+=============================================================================== 
+                         MSMG ToolKit - Source Menu                             
+=============================================================================== 
+                                                                                
+  [1]   Select Source from <DVD> Folder                                         
+                                                                                
+  [2]   Copy Source from DVD Drive                                              
+                                                                                
+  [3]   Extract Source from DVD ISO Image                                       
+                                                                                
+  [4]   Extract Source from OEM IMG Image                                       
+                                                                                
+  [5]   Extract Source from Store ESD Image                                     
+                                                                                
+  [6]   Extract Source from MCT or Custom ESD Image                             
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  [X]   Go Back                                                                 
+                                                                                
+=============================================================================== 
+                                                                                
+Enter Your Choice :

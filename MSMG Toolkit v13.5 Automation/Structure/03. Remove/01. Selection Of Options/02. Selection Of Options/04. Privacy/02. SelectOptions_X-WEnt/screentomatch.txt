@@ -1,0 +1,24 @@
+===============================================================================                                         
+                  MSMG ToolKit - Remove Privacy Components Menu                                                         
+===============================================================================                                         
+                                                                                                                        
+  [01] - Assigned Access
+  [02] - Customer Experience Improvement Program (CEIP)
+  [03] - Face Recognition
+  [04] - Kernel Debugging | Compatiiblity : Application Guard / Containers
+  [05] - Location Service
+  [06] - Picture Password
+  [07] - Pin SignIn Support | Compatiiblity : Biometric
+  [08] - Unified Telemetry Client (Asimov) | Depends on : Windows Error Reporting
+  [09] + Wi-Fi Network Manager (Wi-Fi Sense)
+  [10] - Windows Error Reporting
+  [11] - Windows Insider Hub                                                                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+  [A]   All Privacy Components                                                                                          
+  [X]   Go Back                                                                                                         
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

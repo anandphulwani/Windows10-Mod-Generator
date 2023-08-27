@@ -1,0 +1,58 @@
+===============================================================================                                         
+                  MSMG ToolKit - Remove System Apps Menu                                                                
+===============================================================================                                         
+                                                                                                                        
+  [01] + AAD Broker Plugin - Credential Handler for Microsoft Azure Logon  | Compatiiblity : Windows Store
+  [02] + Accounts Control - App to add Microsoft Account for Microsoft Apps | Compatiiblity : Windows Store
+  [03] - Add Suggested Folders to Library Dialog
+  [04] + App Resolver UX - Modern Open With Dialog
+  [05] - Assigned Access Lock App - Windows Kiosk Mode | Depends on : Assigned Access
+  [06] - Async Text Service - Messaging extensions for People and Maps Apps
+  [07] - Bio Enrollment - Windows Hello Setup | Compatiiblity : Biometric
+  [08] - Calling Shell App - App to host call progress on shell
+  [09] + Capture Picker - A system picker UI control to select an item on the screen to capture | Depends on : Client CBS
+  [10] - CBSPreview - App for Camera Barcode Scanner
+  [11] + ClientCBS -  User Experience for Windows (Includes InputApp, Screen clipping, Windows 11 Startmenu) | Needed for: Touch screen devices, Windows Store
+  [12] + CloudExperienceHost - Out-of-box Experience (OOBE) | Compatiiblity : Out-of-box Experience (OOBE), Recommended, Windows Store
+  [13] + Content Delivery Manager - Automatic installation of sponsored or promoted apps, suggestions and Ads | Needed for: OOBE & Microsoft Account
+  [15] - Credential Dialog Host - Authentication (Sign-in) shell support for Windows Hello
+  [16] - ECApp - Modern UI Dialog App for Eye Movement Control | Depends on : Windows Mixed Reality
+  [17] + Edge Classic Browser
+  [18] + Edge Developer Tools Client - An extension to edge containing tools for web developers | Depends on : Edge
+  [19] + File Explorer - Modern File Explorer App
+  [20] + File Picker - Modern File Picker Dialog
+  [22] - Lock App - Container App for Apps and Messages on the Lockscreen
+  [23] - Map Control
+  [24] - Narrator Quick Start - QuickStart Guide for Narrator | Depends on : SpeechRecognition
+  [25] + NcsiUwpApp - Network Connectivity Status Indicator (NCSI)
+  [26] + OOBE Network Captive Portal - Captive Network Portals support during OOBE-Phase of Windows | Depends on : CloudExperienceHost
+  [27] + OOBE Network Connection Flow - Connection Flow Network Portals support during OOBE-Phase of Windows | Depends on : CloudExperienceHost
+  [28] - Parental Controls - App for Parental Controls
+  [29] - People Experience Host - People Bar (People Hub)
+  [30] - Pinning Confirmation Dialog
+  [32] + Print Dialog - Modern Print Dialog | Needed for: Printing
+  [33] - Quick Assist App - Modern Remote Assistance App
+  [34] - Retail Demo Content
+  [35] + Search App - Start menu, taskbar & settings search App | Depends on : WebView2SDK
+  [36] - Secure Assessment Browser - Special Windows Mode for Exams (Take Test App) | Depends on : WebView2SDK
+  [37] - Setting Sync - Sync settings between your Windows PCs and devices
+  [38] + ShellExperienceHost - Shell Experience Host | Needed for: Start menu, Taskbar Calendar, Clock, Network Flyouts
+  [39] - Skype ORTC
+  [40] + Smart Screen - Windows Defender SmartScreen Functionality for Modern Apps
+  [41] + StartMenuExperienceHost - Start Menu | Depends on : ShellExperienceHost
+  [43] + Webcam Experience
+  [44] + WebView2 Runtime
+  [45] + Win32 WebView Host - Desktop App Web Viewer
+  [46] + Windows Defender App
+  [47] - Windows Mixed Reality
+  [48] - Windows Reader (PDF) | Depends on : Edge
+  [49] + Windows Store Back-end Client
+  [50] - Xbox Console Companion Back-end Client
+  [51] - Xbox Game Callable UI - Xbox Live
+  [52] - XGpu Eject Dialog - Modern Dialog App for safe removal of external GPUs
+                                                                                                                        
+  [A]    All System Apps                                                                                                
+  [X]    Go Back                                                                                                        
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

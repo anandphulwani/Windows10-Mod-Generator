@@ -1,0 +1,24 @@
+===============================================================================
+                          MSMG ToolKit - Start Up
+===============================================================================
+
+Reading Host OS Information...
+
+Windows 10 Professional Client (22H2) - v10.0.19045.2965 x64 en-IN
+
+Setting Toolkit and WADK tools environment path variables...
+
+DISM.exe           =  E:\00_Toolkit_v13.5\Bin\x64\DISM10\Dism.exe
+Imagex.exe         =  E:\00_Toolkit_v13.5\Bin\x64\imagex.exe
+Oscdimg.exe        =  E:\00_Toolkit_v13.5\Bin\x64\oscdimg.exe
+Dvdburn.exe        =  E:\00_Toolkit_v13.5\Bin\dvdburn.exe
+7zip.exe           =  E:\00_Toolkit_v13.5\Bin\x64\7z.exe
+EsdDecrypt.exe     =  E:\00_Toolkit_v13.5\Bin\esddecrypt.exe
+ToolKitHelper.exe  =  E:\00_Toolkit_v13.5\Bin\ToolKitHelper.exe
+ResourceHacker.exe =  E:\00_Toolkit_v13.5\Bin\ResourceHacker.exe
+WimlibImagex.exe   =  E:\00_Toolkit_v13.5\Bin\x64\wimlib-imagex.exe
+
+
+
+===============================================================================
+Press any key to continue...

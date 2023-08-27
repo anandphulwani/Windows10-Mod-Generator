@@ -1,0 +1,24 @@
+===============================================================================
+                       MSMG ToolKit - Apply Source Menu
+===============================================================================
+
+  [1]   Cleanup Source Images using DISM Cleanup-Image
+
+  [2]   Apply & Save Changes to Source Images
+
+  [3]   Discard Changes & Unmount Source Images
+
+
+
+
+
+
+
+
+
+
+  [X]   Go Back
+
+===============================================================================
+
+Enter Your Choice :

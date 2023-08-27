@@ -1,0 +1,24 @@
+===============================================================================                                         
+                MSMG ToolKit - Remove Network Components Menu                                                           
+===============================================================================                                         
+                                                                                                                        
+  [01] - Offline Files | Compatiiblity : Application Guard / Containers
+  [02] + Open SSH
+  [03] + Remote Desktop Client | Compatiiblity : Recommended
+  [04] + Remote Differential Compression (RDC)
+  [05] + Simple TCP/IP Services
+  [06] + Telnet Client
+  [07] + TFTP Client
+  [08] - Wallet Service
+  [09] - Windows Mail                                                                                                 
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+  [A]   All Network Components                                                                                          
+  [X]   Go Back                                                                                                         
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

@@ -1,0 +1,24 @@
+===============================================================================
+                      MSMG ToolKit - Select Target Menu
+===============================================================================
+
+  [1]   Make a DVD ISO Image
+
+  [2]   Burn an ISO Image to DVD
+
+  [3]   Copy Source to USB Flash Drive
+
+  [4]   Sync Source Boot & Install Images to USB Flash Drive
+
+  [5]   Burn an ISO Image to Bootable USB Flash Drive
+
+  [6]   Format a USB Flash Drive
+
+
+
+
+  [X]   Go Back
+
+===============================================================================
+
+Enter Your Choice :

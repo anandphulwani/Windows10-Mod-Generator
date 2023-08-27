@@ -1,0 +1,25 @@
+=============================================================================== 
+               MSMG ToolKit - Select Source from <DVD> folder                   
+=============================================================================== 
+                                                                                
+------------------------------------------------------------------------------- 
+####Selecting Source Images#################################################### 
+------------------------------------------------------------------------------- 
+                                                                                
+Reading Image Information...                                                    
+                                                                                
+=============================================================================== 
+| Index | Arch | Name                                                           
+=============================================================================== 
+|   1   | x64  | Windows 10 Pro                                                 
+=============================================================================== 
+                                                                                
+Enter the Image Index # ['Q'uit] : 1                                            
+                                                                                
+The selected source image build does not support custom component removal,      
+However it supports DISM component removal. For component removal, use Remove   
+Windows Components using Package List (DISM Method) menu.                       
+Do you want to continue ? ['Y'es/'N'o] : Y
+
+Do you want to mount Windows Setup Boot Image ? ['Y'es/'N'o] : Y
+Do you want to mount Windows Recovery Image ? ['Y'es/'N'o] :

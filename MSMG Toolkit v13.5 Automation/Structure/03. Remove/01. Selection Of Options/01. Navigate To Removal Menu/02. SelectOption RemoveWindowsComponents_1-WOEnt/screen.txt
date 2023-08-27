@@ -1,0 +1,24 @@
+=============================================================================== 
+                          MSMG ToolKit - Remove Menu                            
+=============================================================================== 
+                                                                                
+  [1]   Remove Windows Components                                               
+                                                                                
+  [2]   Remove Windows Apps Using Apps List                                     
+                                                                                
+  [3]   Remove Windows Components Using Package List                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  [X]   Go Back                                                                 
+                                                                                
+=============================================================================== 
+                                                                                
+Enter Your Choice :

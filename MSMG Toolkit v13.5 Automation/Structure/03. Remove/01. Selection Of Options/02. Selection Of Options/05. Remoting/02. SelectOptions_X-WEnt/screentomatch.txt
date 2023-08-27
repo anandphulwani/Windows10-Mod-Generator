@@ -1,0 +1,24 @@
+===============================================================================                                         
+                  MSMG ToolKit - Remove Remoting Components Menu                                                        
+===============================================================================                                         
+                                                                                                                        
+  [01] + Home Group
+  [02] - MultiPoint Connector
+  [03] - OneDrive Desktop Client
+  [04] - Remote Assistance
+  [05] + Remote Desktop Server | Compatiiblity : Application Guard / Containers, Hyper-V
+  [06] + Remote Registry
+  [07] + Work Folders Client                                                                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+  [A]   All Remoting Components                                                                                         
+  [X]   Go Back                                                                                                         
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

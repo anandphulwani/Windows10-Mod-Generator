@@ -1,0 +1,33 @@
+===============================================================================                                         
+                  MSMG ToolKit - Remove System Components Menu                                                          
+===============================================================================                                         
+                                                                                                                        
+  [01] + Accessibility Tools
+  [03] - Device Lockdown (Embedded Experience)
+  [04] + Ease of Access Cursors | Depends on : Accessibility Tools
+  [05] + Ease of Access Themes | Depends on : Accessibility Tools
+  [06] - Easy Transfer | Compatiiblity : Windows Upgrade
+  [07] - File History
+  [08] + Magnifier | Depends on : Accessibility Tools
+  [09] - Manual Setup (InPlace Upgrade) | Compatiiblity : Windows Upgrade
+  [10] - Narrator | Depends on : Accessibility Tools, Speech Recognition
+  [11] + Notepad
+  [12] + On Screen Keyboard | Depends on : Accessibility Tools
+  [13] + Paint
+  [14] - Projected File System (ProjFS)
+  [15] + Security Center | Depends on : Windows Defender | Compatiiblity : Application Guard / Containers
+  [16] - Steps Recorder
+  [17] + Storage Spaces
+  [18] - System Restore
+  [19] - Windows Backup
+  [20] + Windows Firewall | Compatiiblity : Recommended
+  [21] + Windows Subsystem For Linux
+  [22] - Windows To Go
+  [23] + Windows Update | Compatiiblity : Windows Update
+  [24] + Wordpad                                                                                                       
+                                                                                                                        
+  [A]   All System Components                                                                                           
+  [X]   Go Back                                                                                                         
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

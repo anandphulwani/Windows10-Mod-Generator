@@ -1,0 +1,51 @@
+===============================================================================                                         
+                  MSMG ToolKit - Remove Windows Apps Menu                                                               
+===============================================================================                                         
+                                                                                                                        
+  [01] - 3D Viewer | Depends on : Windows Mixed Reality
+  [02] - Advertising Xaml
+  [03] + Alarms & Clock
+  [04] + Calculator App
+  [05] - Camera
+  [06] - Cortana | Depends on : Speech Recognition
+  [07] + Desktop App Installer
+  [08] - Feedback Hub
+  [10] - Get Help
+  [11] + Google's VP9 WebM Video Codec Plugin
+  [12] - Groove Music
+  [13] + High Efficiency Image File (HEIF) Codec Plugin
+  [14] - Maps | Depends on : Map Control
+  [16] - Microsoft Pay | Depends on : Wallet Service
+  [17] - Mixed Reality Portal | Depends on : Windows Mixed Reality
+  [18] - Movies & TV App
+  [20] - My Office
+  [21] - OneNote
+  [22] - Paint 3D
+  [23] - People | Depends on : People Bar
+  [24] - Phone Link
+  [25] + Photos
+  [27] - Screen Sketch
+  [28] - Services Store Engagement | Depends on : Windows Store App
+  [29] - Skype
+  [30] - Solitaire Collection | Depends on : Xbox Live
+  [31] - Sticky Notes | Depends on : Windows Store App
+  [32] - Store Experience Host | Depends on : Windows Store App
+  [33] - Tips - Windows tips and tutorials App
+  [34] - Voice Recorder
+  [35] - Weather | Depends on : Advertising Xaml
+  [36] + Web Media Codec Plugin
+  [37] + WebP Image Codec Plugin
+  [38] - Windows Mail App | Depends on : Advertising Xaml, Windows Mail
+  [39] - Windows Store App | Depends on : Windows Store Back-end Client, Xbox Identity Provider
+  [40] - Xbox Console Companion | Depends on : Xbox Console Companion Back-end Client
+  [41] - Xbox Game Bar Plugin | Depends on : Xbox Console Companion
+  [42] - Xbox Game Bar | Depends on : Xbox Console Companion
+  [43] - Xbox Identity Provider | Depends on : Xbox Console Companion
+  [44] - Xbox Game Speech Window | Depends on : Xbox Console Companion
+  [45] - Xbox UI | Depends on : Xbox Console Companion
+                                                                                                                        
+  [A]    All Windows Apps                                                                                               
+  [X]    Go Back                                                                                                        
+                                                                                                                        
+===============================================================================                                         
+Enter Your Choice :

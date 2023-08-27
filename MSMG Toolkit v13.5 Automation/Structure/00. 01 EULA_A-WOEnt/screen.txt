@@ -1,0 +1,25 @@
+===============================================================================
+########################## MSMG ToolKit - EULA ################################
+===============================================================================
+
+
+ The MSMG Toolkit is basically a tool to service, customize, add or remove
+ features and components, enable or disable features to Windows operating
+ system.
+
+ The MSMG Toolkit is intended to be used with licensed Microsoft Windows
+ operating systems only.
+
+ This MSMG Toolkit is provided 'as-is', without any express or implied warranty.
+ In no event will the author be held liable for any damages arising from the
+ use of this script.
+
+ The MSMG Toolkit uses various 3rd party tools to accomplish some of it's
+ tasks.
+
+ MSMG ToolKit, Windows are registered trademarks of their respective authors
+ or companies.
+
+
+===============================================================================
+###########################[ 'A'ccept / 'R'eject ]############################

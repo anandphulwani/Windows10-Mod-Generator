@@ -1,0 +1,23 @@
+=============================================================================== 
+                 MSMG ToolKit - Remove Multimedia Components Menu               
+=============================================================================== 
+                                                                                
+  [01] + First Logon Animation | Depends on : Out-of-box Experience (OOBE)
+  [02] - Game Explorer | Compatiiblity : Microsoft Games
+  [03] + Lock Screen Background
+  [04] - Screen Savers
+  [05] - Snipping Tool
+  [06] + Sound Themes
+  [07] - Speech Recognition
+  [08] - Wallpapers
+  [09] + Windows Media Player
+  [10] + Windows Photo Viewer
+  [11] + Windows Themes
+  [12] - Windows TIFF IFilter (OCR)
+  [13] - Windows System Assessment Tool | Compatiiblity : Microsoft Games
+                                                                                
+  [A]    All System Apps                                                        
+  [X]    Go Back                                                                
+                                                                                
+=============================================================================== 
+Enter Your Choice :
