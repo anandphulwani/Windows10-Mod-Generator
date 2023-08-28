@@ -4,6 +4,7 @@ ProcessFolder(fullFileName)
 {
     WriteLog("ProcessFolder Starts")
     global pid
+    FormatTime, currentDateTime,, yyyyMMdd[HHmmss]
     If (InStr(fullFileName, "screen.txt") = StrLen(fullFileName) - 9)
     {
         FileRead, fileContents, %fullFileName%
@@ -43,6 +44,10 @@ ProcessFolder(fullFileName)
     
     if (RegExMatch(folderName, "^(?!_)[^_]+_[^_]+$"))
     {
+        If ( InStr(folderName, "@currDateTime@") )
+        {
+            folderName := StrReplace(folderName, "@currDateTime@", currentDateTime)
+        }
         StringSplit, folderParts, folderName, _
         latterValue := folderParts2
         latterValueParts := ""
@@ -57,25 +62,26 @@ ProcessFolder(fullFileName)
         }
         
         consoleText := RTrimAndRemoveBlankLines(GetConsoleText()) . " "
-        If (latterValueParts2 = "WOEnt" || latterValueParts2 = "WOEntIgnM")
+        If (latterValueParts2 = "WOEnt")
         {
-            Loop 
+            latterValueParts1ToControlSend := RegExReplace(latterValueParts1, "[[:upper:]]+", "{Shift Down}$0{Shift Up}")
+            Loop
             {
-                ControlSend, , %latterValueParts1%, ahk_pid %pid%
+                ControlSend, , %latterValueParts1ToControlSend%, ahk_pid %pid%
                 Sleep, 300
-                If ( latterValueParts2 = "WOEntIgnM" || consoleText != RTrimAndRemoveBlankLines(GetConsoleText()) . " ")
+                If ( consoleText != RTrimAndRemoveBlankLines(GetConsoleText()) . " ")
                 {
                     Break
                 }
             }
         }
-        Else If (latterValueParts2 = "WEnt" || latterValueParts2 = "WEntIgnM")
+        Else If (latterValueParts2 = "WEnt")
         {
+            latterValueParts1ToControlSend := RegExReplace(latterValueParts1, "[[:upper:]]+", "{Shift Down}$0{Shift Up}")
             Loop 
             {
-                ControlSend, , %latterValueParts1%, ahk_pid %pid%
-                Sleep, 300
-                If ( latterValueParts2 = "WEntIgnM" || RTrimAndRemoveBlankLines(consoleText . latterValueParts1) = RTrimAndRemoveBlankLines(GetConsoleText()))
+                ControlSend, , %latterValueParts1ToControlSend%, ahk_pid %pid%
+                If ( RTrimAndRemoveBlankLines(consoleText . latterValueParts1) = RTrimAndRemoveBlankLines(GetConsoleText()))
                 {
                     Break
                 }
@@ -85,7 +91,7 @@ ProcessFolder(fullFileName)
             {
                 ControlSend, , {Enter}, ahk_pid %pid%
                 Sleep, 300
-                If ( latterValueParts2 = "WEntIgnM" || consoleText != RTrimAndRemoveBlankLines(GetConsoleText()) . " ")
+                If ( consoleText != RTrimAndRemoveBlankLines(GetConsoleText()) . " ")
                 {
                     Break
                 }

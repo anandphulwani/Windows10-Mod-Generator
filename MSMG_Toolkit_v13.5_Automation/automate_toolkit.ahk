@@ -10,11 +10,11 @@
 #Include Includes\\AdjustScreenToMatchTextFile.ahk
 
 SendMode Input
+SetKeyDelay, 50, 50
 SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, 2
 
-Run ".\\MSMG Toolkit v13.5\\Start.cmd"
-Sleep, 4000
+Run "..\\MSMG_Toolkit_v13.5\\Start.cmd"
 
 WinWait, :  MSMG Toolkit v13.5,,30
 WinActivate, :  MSMG Toolkit v13.5,,30
@@ -27,10 +27,10 @@ if ErrorLevel
 	ExitApp
 }
 AttachConsole(pid)
+Sleep, 4000
 
 TraverseFolders("Structure")
 WriteLog("Done")
-MsgBox, Done
 
 ; Loop, 15
 ; {

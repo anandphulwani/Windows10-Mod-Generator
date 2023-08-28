@@ -1,0 +1,30 @@
+===============================================================================
+                          MSMG ToolKit - Start Up
+===============================================================================
+
+Reading Host OS Information...
+**BLOCK SEPERATOR**
+Windows 10
+**BLOCK SEPERATOR**
+Setting Toolkit and WADK tools environment path variables...
+**BLOCK SEPERATOR**
+DISM.exe           =
+**BLOCK SEPERATOR**
+Imagex.exe         =
+**BLOCK SEPERATOR**
+Oscdimg.exe        =
+**BLOCK SEPERATOR**
+Dvdburn.exe        =
+**BLOCK SEPERATOR**
+7zip.exe           =
+**BLOCK SEPERATOR**
+EsdDecrypt.exe     =
+**BLOCK SEPERATOR**
+ToolKitHelper.exe  =
+**BLOCK SEPERATOR**
+ResourceHacker.exe =
+**BLOCK SEPERATOR**
+WimlibImagex.exe   =
+**BLOCK SEPERATOR**
+===============================================================================
+Press any key to continue...
