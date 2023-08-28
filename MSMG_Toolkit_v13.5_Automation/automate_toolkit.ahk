@@ -16,9 +16,9 @@ SetTitleMatchMode, 2
 
 Run "..\\MSMG_Toolkit_v13.5\\Start.cmd"
 
-WinWait, :  MSMG Toolkit v13.5,,30
-WinActivate, :  MSMG Toolkit v13.5,,30
-WinWaitActive, :  MSMG Toolkit v13.5,,30
+WinWait, :  MSMG Toolkit v13.5,,120
+WinActivate, :  MSMG Toolkit v13.5,,120
+WinWaitActive, :  MSMG Toolkit v13.5,,120
 
 WinGet, pid, PID , :  MSMG Toolkit v13.5
 if ErrorLevel
@@ -27,7 +27,6 @@ if ErrorLevel
 	ExitApp
 }
 AttachConsole(pid)
-Sleep, 4000
 
 TraverseFolders("Structure")
 WriteLog("Done")

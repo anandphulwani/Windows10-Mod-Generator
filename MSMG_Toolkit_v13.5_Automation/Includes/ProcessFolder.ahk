@@ -61,7 +61,11 @@ ProcessFolder(fullFileName)
             latterValueParts2 := "WOEnt"
         }
         
-        consoleText := RTrimAndRemoveBlankLines(GetConsoleText()) . " "
+        consoleText := " "
+        while (consoleText = " ") 
+        {
+            consoleText := RTrimAndRemoveBlankLines(GetConsoleText()) . " "
+        }
         If (latterValueParts2 = "WOEnt")
         {
             latterValueParts1ToControlSend := RegExReplace(latterValueParts1, "[[:upper:]]+", "{Shift Down}$0{Shift Up}")
@@ -69,9 +73,20 @@ ProcessFolder(fullFileName)
             {
                 ControlSend, , %latterValueParts1ToControlSend%, ahk_pid %pid%
                 Sleep, 300
-                If ( consoleText != RTrimAndRemoveBlankLines(GetConsoleText()) . " ")
+
+                currConsoleText := " "
+                while (currConsoleText = " ") 
                 {
+                    currConsoleText := RTrimAndRemoveBlankLines(GetConsoleText()) . " "
+                }
+
+                If ( consoleText != currConsoleText )
+                {
+                    WriteLog(" WOEnt ----> Breaking Now Starts. ")
+                    WriteLog(consoleText)
+                    WriteLog(currConsoleText)
                     Break
+                    WriteLog(" WOEnt ----> Breaking Now Ends. ")
                 }
             }
         }
