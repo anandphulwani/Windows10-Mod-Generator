@@ -1,3 +1,21 @@
+@ECHO OFF
+REM BFCPEOPTIONSTART
+REM Advanced BAT to EXE Converter www.BatToExeConverter.com
+REM BFCPEEXE=C:\Users\Administrator\Desktop\revisionos-playbook_forachange\playbooks_share\RunAutomation.exe
+REM BFCPEICON=
+REM BFCPEICONINDEX=0
+REM BFCPEEMBEDDISPLAY=0
+REM BFCPEEMBEDDELETE=1
+REM BFCPEADMINEXE=1
+REM BFCPEINVISEXE=0
+REM BFCPEVERINCLUDE=0
+REM BFCPEVERVERSION=1.0.0.0
+REM BFCPEVERPRODUCT=Product Name
+REM BFCPEVERDESC=Product Description
+REM BFCPEVERCOMPANY=Your Company
+REM BFCPEVERCOPYRIGHT=Copyright Info
+REM BFCPEOPTIONEND
+@ECHO ON
 cd /D %~dp0
 pause
 ".\MSMG_Toolkit_v13.5\Bin\x64\NSudo.exe" -U:T -P:E ".\MSMG_Toolkit_v13.5_Automation\automate_toolkit.exe"
