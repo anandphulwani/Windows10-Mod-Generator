@@ -1,7 +1,6 @@
 @ECHO OFF
 REM BFCPEOPTIONSTART
 REM Advanced BAT to EXE Converter www.BatToExeConverter.com
-REM BFCPEEXE=C:\Users\Administrator\Desktop\revisionos-playbook_forachange\playbooks_share\RunAutomation.exe
 REM BFCPEICON=
 REM BFCPEICONINDEX=0
 REM BFCPEEMBEDDISPLAY=0
