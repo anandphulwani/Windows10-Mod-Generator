@@ -115,7 +115,7 @@ privilege: TrustedInstaller
 actions:
     # ---------- <COMMENT>
   - !taskKill: {name: "<PROCESS NAME TO KILL WITHOUT EXTENSION>"}
-  - !file: {path: '<FILE PATHNAME TO DELETE, USE VARIABLES LIKE %windir%, %ProgramData% ETC>'}
+  - !file: {path: '<FILE PATHNAME TO DELETE, USE VARIABLES LIKE %windir%, %ProgramData%, you can check them at https://pureinfotech.com/list-environment-variables-windows-10/ ETC>'}
   - !registryKey: {path: 'HKLM\<REGISTRY KEY PATH>'}
   - !registryValue: {path: 'HKLM\<REGISTRY VALUE PATH>', value: '<REGISTRY VALUE DATA>', operation: <OPERATION>}
   - !run: {exeDir: true, exe: "<BATCH FILENAME.BAT TO RUN>", weight: 20}
