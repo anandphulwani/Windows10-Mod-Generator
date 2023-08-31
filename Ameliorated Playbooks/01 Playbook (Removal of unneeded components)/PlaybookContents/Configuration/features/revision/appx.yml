@@ -59,6 +59,37 @@ actions:
     # Paint 3D
   - !appx: {name: '*Microsoft.MSPaint*', type: family}
 
+    # Steps Recorder
+  - !appx: {name: 'App.StepsRecorder*', type: family}
+  # - !appx: {name: 'App.StepsRecorder*', type: package}
+  # - !appx: {name: 'App.StepsRecorder*', type: app}
+
+  - !appx: {name: '*App.StepsRecorder*', type: family}
+  # - !appx: {name: '*App.StepsRecorder*', type: package}
+  # - !appx: {name: '*App.StepsRecorder*', type: app}
+
+    # Snip and Sketch
+  - !appx: {name: '*ScreenSketch*', type: family}
+
+    # Microsoft Windows Store
+  - !appx: {name: '*WindowsStore*', type: family}
+
+  - !appx: {name: 'Microsoft.StorePurchaseApp', type: family}
+  
+  - !appx: {name: 'Microsoft.Wallet', type: family}
+
+  - !appx: {name: 'Microsoft.Windows.Search', type: family}
+
+    # XBox Game Bar
+  - !appx: {name: 'Microsoft.XboxGamingOverlay', type: family}
+
+    # XBox Console Companion
+  - !appx: {name: '*xboxapp*', type: family}
+  - !appx: {name: '*.xbox*', type: family}
+
+    # Your Phone
+  - !appx: {name: '*Microsoft.YourPhone*', type: family}
+
     # Get Started app
   - !appx: {name: '*WebExperienceHost*', type: app}
 
