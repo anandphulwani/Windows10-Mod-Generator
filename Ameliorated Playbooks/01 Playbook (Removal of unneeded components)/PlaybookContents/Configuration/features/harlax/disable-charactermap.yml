@@ -1,0 +1,42 @@
+---
+title: disable-charactermap
+description: disable-charactermap
+privilege: TrustedInstaller
+actions:
+    # ---------- Character Map
+  - !taskKill: {name: "charmap"}
+
+  - !file: {path: '%ProgramData%\Microsoft\Windows\Start Menu\Programs\Accessories\System Tools\Character Map.lnk'}
+  - !file: {path: '%windir%\System32\bopomofo.uce'}
+  - !file: {path: '%windir%\System32\charmap.exe'}
+  - !file: {path: '%windir%\System32\gb2312.uce'}
+  - !file: {path: '%windir%\System32\ideograf.uce'}
+  - !file: {path: '%windir%\System32\kanji_1.uce'}
+  - !file: {path: '%windir%\System32\kanji_2.uce'}
+  - !file: {path: '%windir%\System32\korean.uce'}
+  - !file: {path: '%windir%\System32\ShiftJIS.uce'}
+  - !file: {path: '%windir%\System32\SubRange.uce'}
+  - !file: {path: '%windir%\SysWOW64\bopomofo.uce'}
+  - !file: {path: '%windir%\SysWOW64\charmap.exe'}
+  - !file: {path: '%windir%\SysWOW64\gb2312.uce'}
+  - !file: {path: '%windir%\SysWOW64\ideograf.uce'}
+  - !file: {path: '%windir%\SysWOW64\kanji_1.uce'}
+  - !file: {path: '%windir%\SysWOW64\kanji_2.uce'}
+  - !file: {path: '%windir%\SysWOW64\korean.uce'}
+  - !file: {path: '%windir%\SysWOW64\ShiftJIS.uce'}
+  - !file: {path: '%windir%\SysWOW64\SubRange.uce'}
+
+  - !file: {path: '%windir%\System32\en-US\charmap.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\charmap.exe.mui'}
+
+  - !file: {path: '%windir%\System32\ru-RU\charmap.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\charmap.exe.mui'}
+
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\RemoteApp and Desktop Connections Update'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp', value: '627AB240118E8D7C_Character_Map_lnk_amd64.lnk', operation: delete}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing', value: 'DisableWerReporting', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Configuration', value: 'CBSLogCompress', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Configuration', value: 'NumCBSPersistLogs', type: REG_DWORD, data: '1'}
+
+  - !run: {exeDir: true, exe: "disable-charactermap.bat", weight: 20}

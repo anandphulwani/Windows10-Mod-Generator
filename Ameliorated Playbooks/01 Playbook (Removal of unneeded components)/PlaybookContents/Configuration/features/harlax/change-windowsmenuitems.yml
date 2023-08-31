@@ -1,0 +1,13 @@
+---
+title: change-windowsmenuitems
+description: change-windowsmenuitems
+privilege: TrustedInstaller
+actions:
+  # ---------- Change Windows Menu Items
+  # - !taskKill: {name: ""}
+
+  - !cmd {command: 'attrib +h "%ProgramData%\Microsoft\Windows\Start Menu\Programs\Administrative Tools"'}
+  - !cmd {command: 'attrib +h "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Administrative Tools"'}
+  - !cmd {command: 'if exist "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessibility" (move "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessibility\*" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessories\" && rmdir "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessibility" /S /Q)'}
+
+  # - !run: {exeDir: true, exe: ".bat", weight: 20}

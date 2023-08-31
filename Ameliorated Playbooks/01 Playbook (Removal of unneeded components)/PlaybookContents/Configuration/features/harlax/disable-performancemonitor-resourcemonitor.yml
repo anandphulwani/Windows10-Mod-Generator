@@ -1,0 +1,119 @@
+---
+title: disable-performancemonitor-resourcemonitor
+description: disable-performancemonitor-resourcemonitor
+privilege: TrustedInstaller
+actions:
+    # ---------- Performance Monitor & Resource Monitor
+  - !taskKill: {name: "perfmon"}
+  - !taskKill: {name: "resmon"}
+
+  - !file: {path: '%ProgramData%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Performance Monitor.lnk'}
+  - !file: {path: '%ProgramData%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Resource Monitor.lnk'}
+
+  - !file: {path: '%windir%\System32\pdhui.dll'}
+  - !file: {path: '%windir%\System32\perfmon.exe'}
+  - !file: {path: '%windir%\System32\perfmon.msc'}
+  - !file: {path: '%windir%\System32\resmon.exe'}
+  - !file: {path: '%windir%\System32\sysmon.ocx'}
+  - !file: {path: '%windir%\System32\wdc.dll'}
+  - !file: {path: '%windir%\System32\wvc.dll'}
+
+  - !file: {path: '%windir%\System32\en-US\pdhui.dll.mui'}
+  - !file: {path: '%windir%\System32\en-US\perfmon.exe.mui'}
+  - !file: {path: '%windir%\System32\en-US\perfmon.msc'}
+  - !file: {path: '%windir%\System32\en-US\sysmon.ocx.mui'}
+  - !file: {path: '%windir%\System32\en-US\wdc.dll.mui'}
+  - !file: {path: '%windir%\System32\en-US\wvc.dll.mui'}
+
+  - !file: {path: '%windir%\System32\ru-RU\pdhui.dll.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\perfmon.exe.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\perfmon.msc'}
+  - !file: {path: '%windir%\System32\ru-RU\sysmon.ocx.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\wdc.dll.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\wvc.dll.mui'}
+
+  - !file: {path: '%windir%\SysWOW64\pdhui.dll'}
+  - !file: {path: '%windir%\SysWOW64\perfmon.exe'}
+  - !file: {path: '%windir%\SysWOW64\perfmon.msc'}
+  - !file: {path: '%windir%\SysWOW64\resmon.exe'}
+  - !file: {path: '%windir%\SysWOW64\sysmon.ocx'}
+  - !file: {path: '%windir%\SysWOW64\wdc.dll'}
+  - !file: {path: '%windir%\SysWOW64\wvc.dll'}
+
+  - !file: {path: '%windir%\SysWOW64\en-US\pdhui.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\perfmon.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\perfmon.msc'}
+  - !file: {path: '%windir%\SysWOW64\en-US\sysmon.ocx.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\wdc.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\wvc.dll.mui'}
+
+  - !file: {path: '%windir%\SysWOW64\ru-RU\pdhui.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\perfmon.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\perfmon.msc'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\sysmon.ocx.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\wdc.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\wvc.dll.mui'}
+
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\.blg'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\.perfmoncfg'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\.resmoncfg'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{0CF32AA1-7571-11D0-93C4-00AA00A3DDEA}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{7478EF65-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{7478EF69-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{74b077e8-32de-40ab-be4e-65609f575459}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{855fec53-d2e4-4999-9e87-3414e9cf0ff4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{C3E5D3D2-1A03-11CF-942D-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{C3E5D3D3-1A03-11CF-942D-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{C4D2D8E0-D1DD-11CE-940F-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{CF948561-EDE8-11CE-941E-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{E49741E9-93A8-4AB1-8E96-BF4482282E9C}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Diagnostic.Perfmon.Config'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Diagnostic.Perfmon.Document'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Diagnostic.Resmon.Config'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\PerfFile'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Sysmon'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Sysmon.3'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\TypeLib\{1B773E42-2509-11CF-942F-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{0CF32AA1-7571-11D0-93C4-00AA00A3DDEA}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{7478EF65-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{7478EF69-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{74b077e8-32de-40ab-be4e-65609f575459}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{855fec53-d2e4-4999-9e87-3414e9cf0ff4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{C3E5D3D2-1A03-11CF-942D-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{C3E5D3D3-1A03-11CF-942D-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{C4D2D8E0-D1DD-11CE-940F-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{CF948561-EDE8-11CE-941E-008029004347}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\WOW6432Node\CLSID\{E49741E9-93A8-4AB1-8E96-BF4482282E9C}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}\NodeTypes'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\MMC\SnapIns\{7478EF65-8C46-11d1-8D99-00A0C913CAD4}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain\{A1D284E6-65FF-4971-BDFD-239926FBBC51}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{A1D284E6-65FF-4971-BDFD-239926FBBC51}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\Task Manager'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}\NodeTypes'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\SnapIns\{7478EF65-8C46-11d1-8D99-00A0C913CAD4}'}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\MMC\NodeTypes\{476e6448-aaff-11d0-b944-00c04fd8d5b0}\Extensions\Namespace', value: '{7478EF65-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\MMC\NodeTypes\{99829BF6-BA10-42f1-ACA1-1DCD47B9FE80}\Extensions\Namespace', value: '{7478EF65-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'About', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'NameString', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'NameStringIndirect', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PLA\Templates', value: '{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PLA\Templates', value: '{7478EF62-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PLA\Templates', value: '{7478EF63-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PLA', value: 'Report', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp', value: 'F2F852BA90DD4456_Performance_Monitor_lnk_amd64.lnk', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp', value: 'F2F872BD2FAC6E88_Resource_Monitor_lnk_amd64.lnk', operation: delete}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\NodeTypes\{476e6448-aaff-11d0-b944-00c04fd8d5b0}\Extensions\NameSpace', value: '{7478EF65-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\NodeTypes\{99829bf6-ba10-42f1-aca1-1dcd47b9fe80}\Extensions\NameSpace', value: '{7478EF65-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'About', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'NameString', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\MMC\SnapIns\{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', value: 'NameStringIndirect', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\PLA\Templates', value: '{7478EF61-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\PLA\Templates', value: '{7478EF62-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\PLA\Templates', value: '{7478EF63-8C46-11d1-8D99-00A0C913CAD4}', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\PLA', value: 'Report', operation: delete}
+
+  - !run: {exeDir: true, exe: "disable-performancemonitor-resourcemonitor.bat", weight: 20}

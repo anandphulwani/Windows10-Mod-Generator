@@ -1,0 +1,65 @@
+---
+title: disable-diskdefragmentation
+description: disable-diskdefragmentation
+privilege: TrustedInstaller
+actions:
+    # ---------- Disk Defragmentation
+  - !taskKill: {name: "Defrag"}
+  - !taskKill: {name: "dfrgui"}
+
+  - !file: {path: '%ProgramData%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\dfrgui.lnk'}
+
+  - !file: {path: '%windir%\System32\en-US\Defrag.exe.mui'}
+  - !file: {path: '%windir%\System32\en-US\defragres.dll.mui'}
+  - !file: {path: '%windir%\System32\en-US\defragsvc.dll.mui'}
+  - !file: {path: '%windir%\System32\en-US\DfrgUI.exe.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\Defrag.exe.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\defragres.dll.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\defragsvc.dll.mui'}
+  - !file: {path: '%windir%\System32\ru-RU\DfrgUI.exe.mui'}
+  - !file: {path: '%windir%\System32\Defrag.exe'}
+  - !file: {path: '%windir%\System32\defragproxy.dll'}
+  - !file: {path: '%windir%\System32\defragres.dll'}
+  - !file: {path: '%windir%\System32\defragsvc.dll'}
+  - !file: {path: '%windir%\System32\dfrgui.exe'}
+  - !file: {path: '%windir%\SysWOW64\en-US\DfrgUI.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\ru-RU\DfrgUI.exe.mui'}
+  - !file: {path: '%windir%\SysWOW64\dfrgui.exe'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-defrag_31bf3856ad364e35_10.0.14393.0_none_316bfc567179b46c.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-defrag-scheduleclient_31bf3856ad364e35_10.0.14393.0_none_5d688503eaf49e43.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\x86_microsoft-windows-defrag_31bf3856ad364e35_10.0.14393.0_none_d54d60d2b91c4336.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\x86_microsoft-windows-defrag-scheduleclient_31bf3856ad364e35_10.0.14393.0_none_0149e98032972d0d.manifest'}
+
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\AppID\{ab7c873b-eb14-49a6-be60-a602f80e6d22}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{87CB4E0D-2E2F-4235-BC0A-7C62308011F6}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\CLSID\{d20a3293-3341-4ae8-9aaf-8e397cb63c34}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\DefragEngine.DefragEngine'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\DefragEngine.DefragEngine.1'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Interface\{0C401E84-3083-4764-B6B5-A0DE8FEDD40C}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Interface\{87CB4E0D-2E2F-4235-BC0A-7C62308011F6}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Classes\Interface\{c958543e-b3a0-46ee-8085-4f111910d401}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\DefragPath'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-defrag_31bf3856ad364e35_none_53ba52aa53599b43'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-defrag-scheduleclient_31bf3856ad364e35_none_2c3c69f3b7a14864'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\x86_microsoft-windows-defrag_31bf3856ad364e35_none_f79bb7269afc2a0d'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\x86_microsoft-windows-defrag-scheduleclient_31bf3856ad364e35_none_d01dce6fff43d72e'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Defrag-Core/Debug'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{e3257c8c-c7cb-444f-9da0-5d92a2625289}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Maintenance\{CB8E9ABD-9FF5-4EFA-AA08-AA3792167412}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain\{B0CA8AA3-67B9-4F50-840B-D2FE0FD59E13}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain\{CB8E9ABD-9FF5-4EFA-AA08-AA3792167412}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{B0CA8AA3-67B9-4F50-840B-D2FE0FD59E13}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{CB8E9ABD-9FF5-4EFA-AA08-AA3792167412}'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\Defrag'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\Storage Tiers Management\Storage Tiers Optimization'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SvcHost\defragsvc'}
+  - !registryKey: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\DefragPath'}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp', value: 'F2F872BD2FAC6E88_dfrgui_lnk_amd64.lnk', operation: delete}
+
+  - !registryKey: {path: 'HKLM\SYSTEM\ControlSet001\Services\defragsvc'}
+  - !registryKey: {path: 'HKLM\SYSTEM\ControlSet001\Services\EventLog\Application\Microsoft-Windows-Defrag'}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SvcHost', value: 'defragsvc', type: REG_MULTI_SZ, data: '00 00', operation: set}
+
+  - !run: {exeDir: true, exe: "disable-diskdefragmentation.bat", weight: 20}

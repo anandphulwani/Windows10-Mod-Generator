@@ -12,3 +12,10 @@ features:
 - features\revision\registry.yml
 - features\revision\revert.yml
 - features\revision\config.yml
+- features\harlax\disable-narrator.yml
+- features\harlax\disable-charactermap.yml
+- features\harlax\disable-snippingtool.yml
+- features\harlax\disable-performancemonitor-resourcemonitor.yml
+- features\harlax\disable-diskdefragmentation.yml
+- features\harlax\disable-speechrecognition.yml
+- features\harlax\change-windowsmenuitems.yml

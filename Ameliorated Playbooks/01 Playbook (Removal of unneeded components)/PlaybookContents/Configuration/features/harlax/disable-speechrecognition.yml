@@ -1,0 +1,1306 @@
+---
+title: disable-speechrecognition
+description: disable-speechrecognition
+privilege: TrustedInstaller
+actions:
+    # ---------- Speech Recognition
+  - !taskKill: {name: "sapisvr"}
+  - !taskKill: {name: "SpeechUXWiz"}
+  - !taskKill: {name: "SpeechRuntime"}
+  - !taskKill: {name: "SpeechModelDownload"}
+
+  - !file: {path: '%ProgramData%\Microsoft\Windows\Start Menu\Programs\Accessibility\Speech Recognition.lnk'}
+
+  - !file: {path: '%windir%\diagnostics\index\SpeechDiagnostic.xml'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\en-US\CL_LocalizationData.psd1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\en-US\DiagPackage.dll.mui'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\ru-RU\CL_LocalizationData.psd1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\ru-RU\DiagPackage.dll.mui'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\CL_MutexVerifiers.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\CL_RegSnapin.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\CL_RTF.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\CL_SpeechUtil.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\DiagPackage.diagpkg'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\DiagPackage.dll'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\MF_SpeechDiagnostic.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\RS_CalibrationRequired.ps1'}
+  - !file: {path: '%windir%\diagnostics\system\Speech\VF_CalibrationRequired.ps1'}
+  - !file: {path: '%windir%\IME\en-US\SpTip.dll.mui'}
+  - !file: {path: '%windir%\IME\ru-RU\SpTip.dll.mui'}
+  - !file: {path: '%windir%\IME\SPTIP.DLL'}
+  - !file: {path: '%windir%\Media\Speech Disambiguation.wav'}
+  - !file: {path: '%windir%\Media\Speech Misrecognition.wav'}
+  - !file: {path: '%windir%\Media\Speech Off.wav'}
+  - !file: {path: '%windir%\Media\Speech On.wav'}
+  - !file: {path: '%windir%\Media\Speech Sleep.wav'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum'}
+  - !file: {path: '%windir%\Speech\Common\en-US\sapisvr.exe.mui'}
+  - !file: {path: '%windir%\Speech\Common\sapisvr.exe'}
+  - !file: {path: '%windir%\Speech\Engines\Lexicon\en-US\grph1033.lxa'}
+  - !file: {path: '%windir%\Speech\Engines\Lexicon\en-US\lsr1033.lxa'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\af031033.am'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\ai031033.am'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\am031033.am'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\c1033dsk.fe'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.cw'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.dlm'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.ini'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.mllr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.ngr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.phn'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.smp'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\l1033.wwd'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\p1033.dlm'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\p1033.ngr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\s1033.dlm'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\s1033.ngr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\t1033.dlm'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\t1033.ngr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\tn1033.bin'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\u1033.dlm'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\u1033.ngr'}
+  - !file: {path: '%windir%\Speech\Engines\SR\en-US\wp1033.bin'}
+  - !file: {path: '%windir%\Speech\Engines\TTS\en-US\M1033ZIR.APM'}
+  - !file: {path: '%windir%\Speech\Engines\TTS\en-US\M1033ZIR.INI'}
+  - !file: {path: '%windir%\Speech\Engines\TTS\en-US\M1033ZIR.Keyboard.NUS'}
+  - !file: {path: '%windir%\Speech\Engines\TTS\en-US\MSTTSLocEnUS.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\AI041033.am'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\c1033.fe'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\l1033.cw'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\l1033.ini'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\l1033.phn'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\l1033.smp'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\l1033.wwd'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\lsr1033.lxa'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\r1033sr.lxa'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\SR\en-US-N\tn1033.bin'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033David.keyboard.NU2'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033David.keyboard.UNT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033David.keyboard.WIH'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033David.keyboard.WVE'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.tbtdirection.TNU'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.tbtdirection.UNT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.tbtdirection.WIH'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.tbtdirection.WVE'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.voiceAssistant.TNU'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.voiceAssistant.UNT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.voiceAssistant.WIH'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Eva.voiceAssistant.WVE'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Zira.keyboard.NU2'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Zira.keyboard.UNT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Zira.keyboard.WIH'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\NUSData\M1033Zira.keyboard.WVE'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.Address.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.CompanyName.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.Computer.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.Media.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.Message.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\enUS.Name.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033David.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033David.BEP'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033David.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.ACL'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.BEP'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.BR2'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.HEQ'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.NNM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.TDAT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Eva.TON'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Mark.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Mark.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Mark.SPEECHUX.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Mark.TBT.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Zira.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Zira.BEP'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Zira.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Zira.SPEECHUX.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\M1033Zira.TBT.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\MSTTSLocEnUS.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\en-US\MSTTSLocEnUS.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\NUSData\M1049Irina.keyboard.NU2'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\NUSData\M1049Irina.keyboard.UNT'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\NUSData\M1049Irina.keyboard.WIH'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\NUSData\M1049Irina.keyboard.WVE'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Irina.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Irina.BEP'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Irina.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Irina.TBT.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Pavel.APM'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Pavel.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\M1049Pavel.TBT.NUS'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\MSTTSLocRuRU.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\MSTTSLocRuRU.INI'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\RuRU.Address.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\RuRU.Computer.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\RuRU.Message.dat'}
+  - !file: {path: '%windir%\Speech_OneCore\Engines\TTS\ru-RU\RuRU.Name.dat'}
+  - !file: {path: '%windir%\System\Speech\speech-synthesis.xsd'}
+  - !file: {path: '%windir%\System\Speech\synthesis-core.xsd'}
+  - !file: {path: '%windir%\System\Speech\xml.xsd'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0.cat'}
+  - !file: {path: '%windir%\System32\de-DE\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\en-GB\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\en-US\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\es-ES\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\es-MX\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\fr-CA\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\fr-FR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\it-IT\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\ja-jp\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\ko-KR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\migration\SCGMigPlugin.dll'}
+  - !file: {path: '%windir%\System32\pt-BR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\Common\en-US\sapi.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\Common\sapi.dll'}
+  - !file: {path: '%windir%\System32\Speech\Engines\SR\en-US\srloc.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\Engines\SR\spsreng.dll'}
+  - !file: {path: '%windir%\System32\Speech\Engines\SR\spsrx.dll'}
+  - !file: {path: '%windir%\System32\Speech\Engines\SR\srloc.dll'}
+  - !file: {path: '%windir%\System32\Speech\Engines\TTS\MSTTSEngine.dll'}
+  - !file: {path: '%windir%\System32\Speech\Engines\TTS\MSTTSLoc.dll'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\en-US\sapi.cpl.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\en-US\SpeechUX.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\en-US\speechuxcpl.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\en-US\SpeechUXRes.dll'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\en-US\SpeechUXWiz.exe.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\ru-RU\SpeechUX.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\ru-RU\speechuxcpl.dll.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\ru-RU\SpeechUXWiz.exe.mui'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\sapi.cpl'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\SpeechUX.dll'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\speechuxcpl.dll'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\SpeechUXPS.DLL'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\SpeechUXWiz.exe'}
+  - !file: {path: '%windir%\System32\Speech\SpeechUX\SPTIP.DLL'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\en-US\Tokens_SR_en-US-N.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\en-US\tokens_TTS_en-US.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\en-US\tokens_TTS_en-US_david.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\en-US\Tokens_VoiceActivation_en-US.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\ru-RU\tokens_TTS_ru-RU.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\SpeechBrokeredApi.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\SpeechRuntime.exe'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\SpeechServiceWinRTApi.ProxyStub.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\tokens.xml'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Common\Windows.Speech.Pal.Desktop.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Engines\SR\spsreng_onecore.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Engines\SR\spsrx_onecore.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Engines\TTS\MSTTSEngine_OneCore.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\Engines\TTS\MSTTSLoc_OneCore.dll'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\VoiceActivation\en-US\sidubm.table'}
+  - !file: {path: '%windir%\System32\Speech_OneCore\VoiceActivation\en-US\VoiceActivation_en-US.dat'}
+  - !file: {path: '%windir%\System32\zh-CN\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\System32\IPELoggingDictationHelper.dll'}
+  - !file: {path: '%windir%\System32\RemoteNaturalLanguage.dll'}
+  - !file: {path: '%windir%\System32\SpeechPal.dll'}
+  - !file: {path: '%windir%\System32\VoiceActivationManager.dll'}
+  - !file: {path: '%windir%\System32\Windows.Media.Speech.dll'}
+  - !file: {path: '%windir%\System32\Windows.Media.Speech.UXRes.dll'}
+  - !file: {path: '%windir%\SysWOW64\de-DE\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-GB\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\en-US\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\es-ES\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\es-MX\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\fr-CA\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\fr-FR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\it-IT\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\ja-JP\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\ko-KR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\migration\SCGMigPlugin.dll'}
+  - !file: {path: '%windir%\SysWOW64\pt-BR\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Common\en-US\sapi.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Common\sapi.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\SR\en-US\srloc.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\SR\spsreng.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\SR\spsrx.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\SR\srloc.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\TTS\MSTTSEngine.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\Engines\TTS\MSTTSLoc.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech\SpeechUX\en-US\sapi.cpl.mui'}
+  - !file: {path: '%windir%\SysWOW64\Speech\SpeechUX\sapi.cpl'}
+  - !file: {path: '%windir%\SysWOW64\Speech\SpeechUX\SpeechUXPS.DLL'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\en-US\Tokens_SR_en-US-N.xml'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\en-US\tokens_TTS_en-US.xml'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\en-US\tokens_TTS_en-US_david.xml'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\ru-RU\tokens_TTS_ru-RU.xml'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\sapi_onecore.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\SpeechModelDownload.exe'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\SpeechServiceWinRTApi.ProxyStub.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\tokens.xml'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Common\Windows.Speech.Pal.Desktop.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Engines\SR\spsreng_onecore.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Engines\SR\spsrx_onecore.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Engines\TTS\MSTTSEngine_OneCore.dll'}
+  - !file: {path: '%windir%\SysWOW64\Speech_OneCore\Engines\TTS\MSTTSLoc_OneCore.dll'}
+  - !file: {path: '%windir%\SysWOW64\zh-CN\Windows.Media.Speech.UXRes.dll.mui'}
+  - !file: {path: '%windir%\SysWOW64\DictationManager.dll'}
+  - !file: {path: '%windir%\SysWOW64\IPELoggingDictationHelper.dll'}
+  - !file: {path: '%windir%\SysWOW64\RemoteNaturalLanguage.dll'}
+  - !file: {path: '%windir%\SysWOW64\VoiceActivationManager.dll'}
+  - !file: {path: '%windir%\SysWOW64\Windows.Media.Speech.dll'}
+  - !file: {path: '%windir%\SysWOW64\Windows.Media.Speech.UXRes.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_10.0.14393.206_none_e7a1500329a8306a\SpeechBrokeredApi.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_10.0.14393.206_none_e7a1500329a8306a\SpeechRuntime.exe'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_10.0.14393.206_none_e7a1500329a8306a\SpeechServiceWinRTApi.ProxyStub.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_10.0.14393.0_none_e9f98a40bc58c4f0\RemoteNaturalLanguage.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..ortedlanguage_en-us_31bf3856ad364e35_10.0.14393.0_none_5ff9e0110edd1081\SpeechUXRes.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\AI041033.am'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\c1033.fe'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\l1033.cw'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\l1033.ini'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\l1033.phn'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\l1033.smp'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\l1033.wwd'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\lsr1033.lxa'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\r1033sr.lxa'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\tn1033.bin'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1\Tokens_SR_en-US-N.xml'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speech-pal-desktop_31bf3856ad364e35_10.0.14393.206_none_ba2eb68e27d9f588\Windows.Speech.Pal.Desktop.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechpal-desktop_31bf3856ad364e35_10.0.14393.206_none_c17af230b41a1491\SpeechPal.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\af031033.am'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\ai031033.am'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\am031033.am'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\c1033dsk.fe'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\grph1033.lxa'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.cw'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.dlm'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.ini'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.mllr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.ngr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.phn'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.smp'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\l1033.wwd'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\lsr1033.lxa'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\p1033.dlm'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\p1033.ngr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\s1033.dlm'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\s1033.ngr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\t1033.dlm'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\t1033.ngr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\tn1033.bin'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\u1033.dlm'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\u1033.ngr'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124\wp1033.bin'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.Address.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.CompanyName.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.Computer.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.Media.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.Message.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\enUS.Name.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.BEP'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.keyboard.NU2'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.keyboard.UNT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.keyboard.WIH'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033David.keyboard.WVE'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.ACL'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.BEP'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.BR2'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.HEQ'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.NNM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.tbtdirection.TNU'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.tbtdirection.UNT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.tbtdirection.WIH'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.tbtdirection.WVE'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.TDAT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.TON'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.voiceAssistant.TNU'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.voiceAssistant.UNT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.voiceAssistant.WIH'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Eva.voiceAssistant.WVE'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Mark.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Mark.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Mark.SPEECHUX.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Mark.TBT.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.BEP'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.keyboard.NU2'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.keyboard.UNT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.keyboard.WIH'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.keyboard.WVE'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.SPEECHUX.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\M1033Zira.TBT.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\MSTTSLocEnUS.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\tokens_TTS_en-US.xml'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6\tokens_TTS_en-US_david.xml'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.BEP'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.keyboard.NU2'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.keyboard.UNT'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.keyboard.WIH'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.keyboard.WVE'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Irina.TBT.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Pavel.APM'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Pavel.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\M1049Pavel.TBT.NUS'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\MSTTSLocRuRU.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\MSTTSLocRuRU.INI'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\RuRU.Address.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\RuRU.Computer.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\RuRU.Message.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\RuRU.Name.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677\tokens_TTS_ru-RU.xml'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-voiceactivation-en-us_31bf3856ad364e35_10.0.14393.0_none_236ac34309cea932\sidubm.table'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-voiceactivation-en-us_31bf3856ad364e35_10.0.14393.0_none_236ac34309cea932\Tokens_VoiceActivation_en-US.xml'}
+  - !file: {path: '%windir%\WinSxS\amd64_microsoft-windows-voiceactivation-en-us_31bf3856ad364e35_10.0.14393.0_none_236ac34309cea932\VoiceActivation_en-US.dat'}
+  - !file: {path: '%windir%\WinSxS\amd64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_4d443e70e7e53f99\speech-synthesis.xsd'}
+  - !file: {path: '%windir%\WinSxS\amd64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_4d443e70e7e53f99\synthesis-core.xsd'}
+  - !file: {path: '%windir%\WinSxS\amd64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_4d443e70e7e53f99\Windows.Media.Speech.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_4d443e70e7e53f99\Windows.Media.Speech.UXRes.dll'}
+  - !file: {path: '%windir%\WinSxS\amd64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_4d443e70e7e53f99\xml.xsd'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..ge-wow64-deployment_31bf3856ad364e35_10.0.14393.0_none_d5ab67b0304a810e.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..language-deployment_31bf3856ad364e35_10.0.14393.0_none_a6ae0230df3a0106.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_2a9dc3152397ea36.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_9446f9e50a475c08.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_73bedac9749ce5dd.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-r..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_dd6811995b4c57af.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..4-avcore-deployment_31bf3856ad364e35_10.0.14393.0_none_0d0addedbd93bd64.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_0a883718ee1110cd.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_d04f747b496f499d.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_305de5eacbe6d31e.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_b3b641e21f261125.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_bb246aa35ec9968e.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_en-us_cb156709e5e78645.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_797efd9f1cebcec5.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_14367ebe36ec81ec.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_04458257afce9235.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..oyment-languagepack_31bf3856ad364e35_10.0.14393.0_ru-ru_fcd75996702b0ccc.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-onecore-s..s-avcore-deployment_31bf3856ad364e35_10.0.14393.0_none_bd7ccd16c08af7a4.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_2a2831b323b92b8e.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_22a6375a9d2ff895.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_38875b2b5c6c0bb0.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_768413a20032b3c6.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_a24de43ee7742e76.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..ecoreuap-deployment_31bf3856ad364e35_10.0.14393.0_none_fc3529be4c394449.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_0ee12fd28be853dd.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_17dd964527a1a5d1.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_45deb612d897c210.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_e3416e3abfdb2c44.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_eff572eeb21d5fb5.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_10.0.14393.0_none_f1dccbf00e97b78b.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_10.0.14393.0_none_e9f98a40bc58c4f0.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-s..ortedlanguage_en-us_31bf3856ad364e35_10.0.14393.0_none_5ff9e0110edd1081.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_e38b630b4675c8a1.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-speech-iekillbits_31bf3856ad364e35_10.0.14393.0_none_ce70003f238c2bac.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_e4833550031f5124.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_29715d649f8f81f6.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_d4edd088d05e1677.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-t..tospeech-en-us-male_31bf3856ad364e35_10.0.14393.0_none_073753c462fde142.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-texttospeech-en-us_31bf3856ad364e35_10.0.14393.0_none_85d92b7859351ee0.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-texttospeech-ru-ru_31bf3856ad364e35_10.0.14393.0_none_607fcd75a4b823e1.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\amd64_microsoft-windows-voiceactivation-en-us_31bf3856ad364e35_10.0.14393.0_none_236ac34309cea932.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_10.0.14393.0_none_f44e3492f0b986eb.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-s..xperience.resources_31bf3856ad364e35_10.0.14393.0_en-us_d71da304fe9f3a83.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-s..xperience.resources_31bf3856ad364e35_10.0.14393.0_ru-ru_203ebab94fa4362a.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_ede00d5d7ad68a9c.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-speechcommonnoia64_31bf3856ad364e35_10.0.14393.0_none_3a729ccd0ea393ce.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_10.0.14393.0_none_eed7dfa23780131f.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_33c607b6d3f043f1.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_df427adb04bed872.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-t..tospeech-en-us-male_31bf3856ad364e35_10.0.14393.0_none_118bfe16975ea33d.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\wow64_microsoft-windows-texttospeech-ru-ru_31bf3856ad364e35_10.0.14393.0_none_6ad477c7d918e5dc.manifest'}
+  - !file: {path: '%windir%\WinSxS\Manifests\x86_microsoft-windows-speech-iekillbits_31bf3856ad364e35_10.0.14393.0_none_725164bb6b2eba76.manifest'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_10.0.14393.206_none_f1f5fa555e08f265\SpeechServiceWinRTApi.ProxyStub.dll'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_10.0.14393.0_none_f44e3492f0b986eb\RemoteNaturalLanguage.dll'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_10.0.14393.0_none_ede00d5d7ad68a9c\Tokens_SR_en-US-N.xml'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-speechcommon-onecore_31bf3856ad364e35_10.0.14393.351_none_b776eeb1f01b0260\sapi_onecore.dll'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-speechcommon-onecore_31bf3856ad364e35_10.0.14393.351_none_b776eeb1f01b0260\SpeechModelDownload.exe'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-speech-pal-desktop_31bf3856ad364e35_10.0.14393.206_none_c48360e05c3ab783\Windows.Speech.Pal.Desktop.dll'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_33c607b6d3f043f1\tokens_TTS_en-US.xml'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_10.0.14393.0_none_33c607b6d3f043f1\tokens_TTS_en-US_david.xml'}
+  - !file: {path: '%windir%\WinSxS\wow64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_10.0.14393.0_none_df427adb04bed872\tokens_TTS_ru-RU.xml'}
+  - !file: {path: '%windir%\WinSxS\wow64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_5798e8c31c460194\Windows.Media.Speech.dll'}
+  - !file: {path: '%windir%\WinSxS\wow64_windows-media-speech-winrt_31bf3856ad364e35_10.0.14393.351_none_5798e8c31c460194\Windows.Media.Speech.UXRes.dll'}
+
+
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\DisNumbersSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\HubOffSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\HubOnSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\HubSleepSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\MisrecoSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\EventLabels\PanelSound'}
+  - !registryKey: {path: 'HKCU\AppEvents\Schemes\Apps\sapisvr'}
+  - !registryKey: {path: 'HKLM\Software\Classes\AppID\SapiSvr.exe'}
+  - !registryKey: {path: 'HKLM\Software\Classes\AppID\{1725704B-A716-4E04-8EF6-87ED4F0A180A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\AppID\{C945AD06-534F-460C-8CB4-17C33099AF81}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{03DE7B30-9300-4FA9-AF69-BA09497107A2}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{03ECCB13-7A8E-4DBC-B83C-B4E95F9CAD02}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{06405088-BC01-4E08-B392-5303E75090C8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{0655E396-25D0-11D3-9C26-00C04F8EF87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{0CFAE939-931E-4305-8D05-8C76C254EB34}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{0D6417E3-866C-4959-9816-4BF5B85CDAD7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{0D722F1A-9FCF-4E62-96D8-6DF8F01A26AA}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{0F92030A-CBFD-4AB8-A164-FF5985547FF6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{12D73610-A1C9-11D3-BC90-00C04F72DF9F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{139D8403-E74F-41d2-B103-8790C5C7A517}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{1443904b-34e4-40f6-b30f-6beb81267b80}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{14F3C12D-7712-42CC-B7CC-64D2BB560C43}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{15E16AEC-F2F0-4E52-B0DF-029D11E58E4B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{1B2AFB92-0B5E-4A30-B5CC-353DB4F9E150}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{1B57B2A1-E763-4676-9064-297F1B413632}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{1BA21EC2-FC80-4515-AAAB-F5766A4B88BC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{2984A9DB-5689-43AD-877D-14999A15DD46}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{2B20FE1A-1B2C-4DC5-8595-616B0E182FD1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{2D12DD17-6C4E-456E-A953-D210E3C64176}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{31350404-77AC-4471-B33A-9020A2EDA1D1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{3140F5B6-093F-4F94-9141-5DF9EE10BC27}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{351F7C7A-6186-405E-91A8-32DF82F437C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{38FE8DFE-B129-452B-A215-119382B89E3D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{3918D75F-0ACB-41F2-B733-92AA15BCECF6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{3BEE4890-4FE9-4A37-8C1E-5E7E12791C1F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{41B89B6B-9399-11D2-9623-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{455F24E9-7396-4A16-9715-7C0FDBE3EFE3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{47206204-5ECA-11D2-960F-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{488C2839-8ABA-4368-B4DF-8EF11CF99F99}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{4C6F940C-3CFE-11D2-9EE7-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{4F414126-DFE3-4629-99EE-797978317EAD}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{4F4DB904-CA35-4A3A-90AF-C9D8BE7532AC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{57523D96-B7F6-4D2C-8AFC-BCC5F5392E94}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{58598185-CF77-4407-B011-0C8282EF681F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{58E3C745-D971-4081-9034-86E34B30836A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{5FB7EF7D-DFF4-468a-B6B7-2FCBD188F994}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{66EC5C50-45B7-48cd-81D6-20A712011AD1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{7013943A-E2EC-11D2-A086-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{7037C8FC-97F7-4AE5-BF2D-5D2660C97878}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{715D9C59-4442-11D2-9605-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{73AD6842-ACE0-45E8-A4DD-8795881A2C2A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{777B6BBD-2FF2-11D3-88FE-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{81218F10-A8AA-44C4-9436-33A42C3852E9}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{81796171-DF5F-4F1B-A80C-BE4715D3C6BB}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{8DBEF13F-1948-4AA8-8CF0-048EEBED95D8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{90903716-2F42-11D3-9C26-00C04F8EF87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{90BE9587-37b7-477C-81A7-BA7C5C40FF81}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{9185F743-1143-4C28-86B5-BFF14F20E5C8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{947812B3-2AE1-4644-BA86-9E90DED7EC91}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{96749373-3391-11D2-9EE3-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{96749377-3391-11D2-9EE3-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{99EB9580-04EC-4B4C-99F5-52B616D444D9}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{9CDAEA40-A7D3-4cc5-AED0-B5E35AD0F169}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{9DA3DFB6-DB99-4A52-B52B-058E0C6B7956}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{9EF96870-E160-4792-820D-48CF0649E4EC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{A79020BC-1F7E-4D20-AC2A-51D73012DDD5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{A8C680EB-3D32-11D2-9EE7-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{A910187F-0C7A-45AC-92CC-59EDAFB77B53}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{AB1890A0-E91F-11D2-BB91-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{B1E29D59-A675-11D2-8302-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{B5965ACC-842D-4ABE-A618-9292BB3EE666}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{BAE3E62C-37D4-49AC-A6F1-0E485ECD6757}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{BB89EB37-081E-4F5D-BA35-8D636BB47440}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{C23FC28D-C55F-4720-8B32-91F73C2BD5D1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{C64501F6-E6E6-451f-A150-25D0839BC510}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{C79A574C-63BE-44b9-801F-283F87F898BE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{C9E37C15-DF92-4727-85D6-72E5EEB6995A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{CA0AC604-8EF2-448A-AE97-62A2C2CC3C46}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{CC48A47F-EFD6-4925-A515-28C40C5A78B6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{CF3D2E50-53F2-11D2-960C-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D17D1D6D-CC3F-4815-8FE3-607E7D5D10B3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D2C13906-51EF-454e-BC67-A52475FF074C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D36D2090-4DF3-4bd4-A22F-0D91975F7964}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D66949A0-C766-48D7-B2C6-4A85382BE9C1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D6AD10F3-70AB-41E1-96B3-4C36E35D333C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D7FD466D-F6CF-4C8E-86DD-12E9B0FDAE48}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{D9F6EE60-58C9-458B-88E1-2F908FD7F87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{DA93E903-C843-11D2-A084-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{DAC9F469-0C67-4643-9258-87EC128C5941}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{DC626A64-D684-4627-83CB-44420ABDBD1A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{dcbd6fa8-032f-11d3-b5b1-00c04fc324a1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{E2AE5372-5D40-11D2-960E-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{EDA59C23-FCB4-44AF-BFE0-3708C08A212D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{EDF6970E-4557-4BC5-86C2-C7E52A06B27F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{EF411752-3736-4CB4-9C8C-8EF4CCB58EFE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{F3D3F924-11FC-11D3-BB97-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{F48B770A-CBE5-44C2-8D4F-931DE9CEE6FA}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{F6EFEABD-3370-4AA0-A4FD-88BADC3B1A39}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{F7B9271E-46D8-4B6A-B5CF-E6A4F7F49732}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\CLSID\{FA735D10-205D-451B-9EE8-E171F2214EF0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{0E609B09-7847-4870-BC74-DD11F82F9F2B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{0FD498B8-3712-4B94-8F13-9F4560290D0D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{20ABAFEE-2077-4BEF-AB6F-52593B8E6CA3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{22FE8E9E-1B49-45E4-AC1C-5D7EE2ADA429}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{3CCD6749-88FF-470C-A650-95B862AC7235}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{43E7A59C-2C53-49D2-8F30-B3BCFDF56E61}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{4815E0C3-F66C-4236-BD38-FE3810B54076}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{4B346BA0-2265-4846-AD95-BC77586A5E82}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{4b561b47-7a48-4435-9a55-b656fb1fee26}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{4bd5c26a-b267-4c76-9800-b5d31ac24d80}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{53eb69fe-576c-45e9-9af4-22b65ce18787}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{541da813-e0e9-42bd-a3b1-e9aaf2de4f47}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{54DC14E8-C485-405F-B043-7E634F7D64BE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{67C43788-DFDE-464E-BAA1-5AFA424895FD}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{7AF32D56-4737-4EC6-8990-07F183CDA49E}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{8B4B2468-05FA-4F88-BAA0-4651836D2A30}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{8F14E05F-1695-45D1-9E7A-56A49A81C84F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{A55DC428-CB05-4E31-BBE1-4AC9257101FC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{AE89374B-EE56-40EF-AD20-FE32D88B4286}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{BBC37929-D009-4C05-9687-8E84E94F5565}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{C3353227-F2E2-4AC7-AD1C-2786E16F98FB}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{c45e5362-9b95-5bbf-81aa-39261265409e}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{CF864B68-9E8A-46A5-BFD7-9CB50F993311}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{d1036729-0822-5c9a-8bc7-4cf3de30f895}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{d3339fcf-96b5-45fc-b257-97618f632f00}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{E40343C6-5D35-4EF4-92BD-3A818788035A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{EDF6970E-4557-4BC5-86C2-C7E52A06B27F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{F4C6587C-C49E-4254-923B-FB0B09FE13C7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\Interface\{FDE2DC4F-2D9E-4632-A989-68712CDB4B45}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\MSASR.TextNormMultiResult'}
+  - !registryKey: {path: 'HKLM\Software\Classes\MSASR.TextNormMultiResult.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpAudioFormat'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpAudioFormat.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpCompressedLexicon'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpCompressedLexicon.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpCustomStream'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpCustomStream.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpDataKey'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpDataKey.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpFileStream'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpFileStream.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpGramCompBackEnd'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpGramCompBackEnd.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpGrammarCompiler'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpGrammarCompiler.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpInProcRecoContext'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpInProcRecoContext.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpInprocRecognizer'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpInprocRecognizer.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpITNProcessor'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpITNProcessor.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpLexicon'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpLexicon.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMemoryStream'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMemoryStream.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioEnum'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioEnum.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioIn'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioIn.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioOut'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpMMAudioOut.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SPNotify'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SPNotify.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpNotifyTranslator'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpNotifyTranslator.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpNullPhoneConverter'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpNullPhoneConverter.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectToken'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectToken.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectTokenCategory'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectTokenCategory.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectTokenEnum'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpObjectTokenEnum.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhoneConverter'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhoneConverter.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhrase'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhrase.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhraseBuilder'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhraseBuilder.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhraseInfoBuilder'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpPhraseInfoBuilder.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpResourceManager'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpResourceManager.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpSharedRecoContext'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpSharedRecoContext.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpSharedRecognizer'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpSharedRecognizer.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpShortcut'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpShortcut.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpStream'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpStream.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpStreamFormatConverter'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpStreamFormatConverter.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpTextSelectionInformation'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpTextSelectionInformation.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpUncompressedLexicon'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpUncompressedLexicon.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpVoice'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpVoice.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpWaveFormatEx'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPI.SpWaveFormatEx.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPIEngine.TTSEngine'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SAPIEngine.TTSEngine.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SpeechUX.ConfigUI'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SpeechUX.ConfigUI.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SpeechUX.SpeechUXHost'}
+  - !registryKey: {path: 'HKLM\Software\Classes\SpeechUX.SpeechUXHost.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\STSInproc.SpeechTextService'}
+  - !registryKey: {path: 'HKLM\Software\Classes\STSInproc.SpeechTextService.1'}
+  - !registryKey: {path: 'HKLM\Software\Classes\TypeLib\{5F7209DB-16C5-45AE-A67D-60B8585100CA}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\TypeLib\{C866CA3A-32F7-11D2-9602-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\TypeLib\{E6DA930B-BBA5-44DF-AC6F-FE60C1EDDEC8}\5.4\0\win32'}
+  - !registryKey: {path: 'HKLM\Software\Classes\TypeLib\{EB2114C0-CB02-467A-AE4D-2ED171F05E6A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{03DE7B30-9300-4FA9-AF69-BA09497107A2}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{03ECCB13-7A8E-4DBC-B83C-B4E95F9CAD02}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{06405088-BC01-4E08-B392-5303E75090C8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0655E396-25D0-11D3-9C26-00C04F8EF87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0A860B80-3773-4DDE-85B4-E68C520A858C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0CFAE939-931E-4305-8D05-8C76C254EB34}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0D6417E3-866C-4959-9816-4BF5B85CDAD7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0D722F1A-9FCF-4E62-96D8-6DF8F01A26AA}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0DD1B55E-2EB8-42E2-B8D0-F11594A29477}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0EEF5FBE-18F3-478A-BD28-4899C2E90323}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{0F92030A-CBFD-4AB8-A164-FF5985547FF6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{12D73610-A1C9-11D3-BC90-00C04F72DF9F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{1443904b-34e4-40f6-b30f-6beb81267b80}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{14E74C62-DC97-43B0-8F2F-581496A65D60}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{14F3C12D-7712-42CC-B7CC-64D2BB560C43}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{15E16AEC-F2F0-4E52-B0DF-029D11E58E4B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{17383A17-6B93-4193-9B60-4D4F99C05163}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{1B2AFB92-0B5E-4A30-B5CC-353DB4F9E150}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{1B57B2A1-E763-4676-9064-297F1B413632}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{209D8461-E6FB-49DD-A824-C9962A9D2F2B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{210DDC43-689C-46E3-BDC1-38C16C8F4C96}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{25F843F3-1ED6-4B4E-8749-DF294C7FEB30}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{26EEC7CE-6C67-4568-BA8F-52BEA143D756}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{2797B627-B7FA-4CBF-9472-6B8ACFDF3E41}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{27AAD1C8-3564-4A15-B0B8-F73F90FB95A7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{27D62E77-6AFE-4AAE-AF27-E6CC20A884D9}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{28D18BFA-85E3-4419-9AFD-7ECCE53F8D13}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{2984A9DB-5689-43AD-877D-14999A15DD46}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{2B20FE1A-1B2C-4DC5-8595-616B0E182FD1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{2D12DD17-6C4E-456E-A953-D210E3C64176}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{2FFD1C83-BC94-4E39-AEE7-BE162E7D1F84}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{31350404-77AC-4471-B33A-9020A2EDA1D1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{3140F5B6-093F-4F94-9141-5DF9EE10BC27}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{351F7C7A-6186-405E-91A8-32DF82F437C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{38FE8DFE-B129-452B-A215-119382B89E3D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{3918D75F-0ACB-41F2-B733-92AA15BCECF6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{3BEE4890-4FE9-4A37-8C1E-5E7E12791C1F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4000C97B-791B-425F-9AD6-5046210503B1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{41B89B6B-9399-11D2-9623-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{455F24E9-7396-4A16-9715-7C0FDBE3EFE3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{461DED9E-81D5-494F-BC96-6432C8645733}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{47206204-5ECA-11D2-960F-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{47B73B70-1964-444A-B390-FAB1565DCAA3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{488C2839-8ABA-4368-B4DF-8EF11CF99F99}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4C6F940C-3CFE-11D2-9EE7-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4F414126-DFE3-4629-99EE-797978317EAD}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4F4DB904-CA35-4A3A-90AF-C9D8BE7532AC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4F4DD15E-F431-4536-AEE8-AF20BA847A33}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{4F786E23-0F32-4888-BA02-6BB105AE3024}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{5310BE71-5C14-4FBC-8CF5-BD75D3F11A44}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{53E9771B-6A21-4FEC-B8F1-3B0DAE4FACC6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{57523D96-B7F6-4D2C-8AFC-BCC5F5392E94}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{57B67A1A-2C81-4820-96EC-FA33567A9155}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{58598185-CF77-4407-B011-0C8282EF681F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{58E3C745-D971-4081-9034-86E34B30836A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{59BA10A2-E577-488D-BAFA-2D0A3D89D93B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{5B9084E3-CE4E-4C66-8713-5B02396C090B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{5FB7EF7D-DFF4-468a-B6B7-2FCBD188F994}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{62547D24-2ACA-4A33-8F15-AE95CE1A45BD}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{626C80C1-D410-4DE4-9E82-1B4B9610C404}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{636B1538-4AD1-4FA5-831A-403D7146B11D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{655D9BF9-3876-43D0-B6E8-C83C1224154C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{67677441-3350-45B4-9455-4D7F4A50F4E4}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{67EA3D48-83F2-408C-AD46-97F207D79DB3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{6BFCACDC-A6A6-4343-9CF6-83A83727367B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{7013943A-E2EC-11D2-A086-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{7037C8FC-97F7-4AE5-BF2D-5D2660C97878}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{715D9C59-4442-11D2-9605-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{73AD6842-ACE0-45E8-A4DD-8795881A2C2A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{777B6BBD-2FF2-11D3-88FE-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{81218F10-A8AA-44C4-9436-33A42C3852E9}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{81796171-DF5F-4F1B-A80C-BE4715D3C6BB}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{83F18638-2238-4B33-9FF8-24E759ADDC66}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{846225EA-B241-42A7-9D46-A694ECD5A781}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{85AFC315-CAC7-4475-875B-D7161BA14874}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{8A44FFB7-8140-432F-BEC5-1B5FF725BAC8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{8DBEF13F-1948-4AA8-8CF0-048EEBED95D8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{90903716-2F42-11D3-9C26-00C04F8EF87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{90BE9587-37b7-477C-81A7-BA7C5C40FF81}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9185F743-1143-4C28-86B5-BFF14F20E5C8}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{947812B3-2AE1-4644-BA86-9E90DED7EC91}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{96749373-3391-11D2-9EE3-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{96749377-3391-11D2-9EE3-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{99EB9580-04EC-4B4C-99F5-52B616D444D9}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9A4B942C-C16D-44D2-BDAA-1BD772A4050B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9BC773B8-9B6C-400F-8AF0-0DFDD1C43229}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9CDAEA40-A7D3-4cc5-AED0-B5E35AD0F169}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9DA3DFB6-DB99-4A52-B52B-058E0C6B7956}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9EF96870-E160-4792-820D-48CF0649E4EC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{9FF65B15-F7B4-4858-BFE6-DB2083DEDF68}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{A63E13D5-5263-44A6-8A18-381EB6F181A2}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{A79020BC-1F7E-4D20-AC2A-51D73012DDD5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{A8C680EB-3D32-11D2-9EE7-00C04F797396}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{A910187F-0C7A-45AC-92CC-59EDAFB77B53}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{AB1890A0-E91F-11D2-BB91-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{B1E29D59-A675-11D2-8302-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{B5965ACC-842D-4ABE-A618-9292BB3EE666}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{B786ECB7-8942-4FE1-9DCD-230E30DE5AFF}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{BAE3E62C-37D4-49AC-A6F1-0E485ECD6757}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{BB89EB37-081E-4F5D-BA35-8D636BB47440}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{BC065925-E8EF-4EF7-B8C5-006C8DB832D5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{C23FC28D-C55F-4720-8B32-91F73C2BD5D1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{C64501F6-E6E6-451f-A150-25D0839BC510}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{C6FABB24-E332-46FB-BC91-FF331B2D51F0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{C79A574C-63BE-44b9-801F-283F87F898BE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{C9E37C15-DF92-4727-85D6-72E5EEB6995A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{CA0AC604-8EF2-448A-AE97-62A2C2CC3C46}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{CAC59BFB-5547-456C-80D8-F6428C8F5456}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{CC48A47F-EFD6-4925-A515-28C40C5A78B6}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{CE2BB7DC-73F3-482F-90B6-5BFAA04D0157}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{CF3D2E50-53F2-11D2-960C-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D17D1D6D-CC3F-4815-8FE3-607E7D5D10B3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D1915118-9D27-4C69-B82E-7955DAF57201}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D2C13906-51EF-454e-BC67-A52475FF074C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D36D2090-4DF3-4bd4-A22F-0D91975F7964}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D3C4B7DB-E7BB-4778-89A2-E4B0EE41C29F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D5029E5D-F109-4BC0-B6DB-07F92D6ABAE7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D65B9994-6416-41ED-84EE-08733558C381}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D66949A0-C766-48D7-B2C6-4A85382BE9C1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D6707039-94AB-490A-95D6-C268524D8B8F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D6AD10F3-70AB-41E1-96B3-4C36E35D333C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D7FD466D-F6CF-4C8E-86DD-12E9B0FDAE48}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{D9F6EE60-58C9-458B-88E1-2F908FD7F87C}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{DA93E903-C843-11D2-A084-00C04F8EF9B5}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{DAC9F469-0C67-4643-9258-87EC128C5941}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{DC626A64-D684-4627-83CB-44420ABDBD1A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{dcbd6fa8-032f-11d3-b5b1-00c04fc324a1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{DF9144AE-8785-4B2B-93AD-A775CE6B6C42}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{E164F996-FF93-4675-BDD8-6C47AB0B86B1}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{E2AE5372-5D40-11D2-960E-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{E979DAD9-25E8-45D7-AB42-43FB7B9F38CC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{EB36A2D2-BA9E-457F-8023-66EE08D4D955}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{EDA59C23-FCB4-44AF-BFE0-3708C08A212D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{EDF6970E-4557-4BC5-86C2-C7E52A06B27F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{EF411752-3736-4CB4-9C8C-8EF4CCB58EFE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F375FDC3-9DB0-4927-A84A-FC1215B3570F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F3D3F924-11FC-11D3-BB97-00C04F8EE6C0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F48B770A-CBE5-44C2-8D4F-931DE9CEE6FA}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F6EFEABD-3370-4AA0-A4FD-88BADC3B1A39}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F7B9271E-46D8-4B6A-B5CF-E6A4F7F49732}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{F7FF39BA-FA79-11E4-87DA-8F461D5D46B0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{FA2C37A7-2D1E-444F-AD7B-D946823A7072}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{FA735D10-205D-451B-9EE8-E171F2214EF0}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{FC31D09D-D059-4551-9A28-B88A4181EC29}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\CLSID\{FF99E1C1-7F9A-4C83-8A57-305992EDD07B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{0E609B09-7847-4870-BC74-DD11F82F9F2B}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{0FD498B8-3712-4B94-8F13-9F4560290D0D}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{20ABAFEE-2077-4BEF-AB6F-52593B8E6CA3}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{22FE8E9E-1B49-45E4-AC1C-5D7EE2ADA429}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{3CCD6749-88FF-470C-A650-95B862AC7235}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{43E7A59C-2C53-49D2-8F30-B3BCFDF56E61}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{4815E0C3-F66C-4236-BD38-FE3810B54076}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{4B346BA0-2265-4846-AD95-BC77586A5E82}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{4b561b47-7a48-4435-9a55-b656fb1fee26}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{4bd5c26a-b267-4c76-9800-b5d31ac24d80}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{53eb69fe-576c-45e9-9af4-22b65ce18787}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{541da813-e0e9-42bd-a3b1-e9aaf2de4f47}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{54DC14E8-C485-405F-B043-7E634F7D64BE}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{67C43788-DFDE-464E-BAA1-5AFA424895FD}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{7AF32D56-4737-4EC6-8990-07F183CDA49E}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{8B4B2468-05FA-4F88-BAA0-4651836D2A30}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{8F14E05F-1695-45D1-9E7A-56A49A81C84F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{A55DC428-CB05-4E31-BBE1-4AC9257101FC}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{AE89374B-EE56-40EF-AD20-FE32D88B4286}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{BBC37929-D009-4C05-9687-8E84E94F5565}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{C3353227-F2E2-4AC7-AD1C-2786E16F98FB}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{c45e5362-9b95-5bbf-81aa-39261265409e}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{CF864B68-9E8A-46A5-BFD7-9CB50F993311}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{d1036729-0822-5c9a-8bc7-4cf3de30f895}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{d3339fcf-96b5-45fc-b257-97618f632f00}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{E40343C6-5D35-4EF4-92BD-3A818788035A}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{EDF6970E-4557-4BC5-86C2-C7E52A06B27F}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{F4C6587C-C49E-4254-923B-FB0B09FE13C7}'}
+  - !registryKey: {path: 'HKLM\Software\Classes\WOW6432Node\Interface\{FDE2DC4F-2D9E-4632-A989-68712CDB4B45}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\CTF\TIP\{DCBD6FA8-032F-11D3-B5B1-00C04FC324A1}\LanguageProfile'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Internet Explorer\ActiveX Compatibility\{3BEE4890-4FE9-4A37-8C1E-5E7E12791C1F}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Internet Explorer\ActiveX Compatibility\{47206204-5ECA-11D2-960F-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\AudioInput'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\AudioOutput'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\PhoneConverters'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\Recognizers'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\UserTokens'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\UX'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech\Voices'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\AudioPolicy'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\CortanaVoices'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\Preferences'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\Recognizers'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\Service'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\ServiceLanguages'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Speech_OneCore\Voices'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Plain\{B6EE76B2-4F82-4E15-9345-C867A29CBAD0}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{B6EE76B2-4F82-4E15-9345-C867A29CBAD0}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\Speech'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\CapabilityIndex\Language.Speech'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\CapabilityIndex\Language.TextToSpeech'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\ComponentDetect\amd64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_0.0.0.0_none_3c7daff6a62dcdf5'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\ComponentDetect\wow64_microsoft-windows-r..ral-language-client_31bf3856ad364e35_0.0.0.0_none_46d25a48da8e8ff0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~en-US~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageIndex\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-Speech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-WOW64-avcore-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-OneCore-SpeechComponents-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-enduser-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackagesPending\Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-WOW64-Package~31bf3856ad364e35~amd64~~10.0.14393.0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{58E3C745-D971-4081-9034-86E34B30836A}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{D17D1D6D-CC3F-4815-8FE3-607E7D5D10B3}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-r..ge-wow64-deployment_31bf3856ad364e35_none_fd8e840e21b42f31'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-r..language-deployment_31bf3856ad364e35_none_c8bae1819c7d20f9'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-s..4-avcore-deployment_31bf3856ad364e35_none_36493637bcac0c0b'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_none_820950b3f88fd379'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-s..ecoreuap-deployment_31bf3856ad364e35_none_efd636e47e653baa'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-s..ecoreuap-deployment_31bf3856ad364e35_none_f735d9560277355a'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-onecore-s..s-avcore-deployment_31bf3856ad364e35_none_0952e47a4a9093cb'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_0b0fb476fb146d1a'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_5a7a46364aa41c2b'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_84a35a22b9ab99bf'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_c25e08f42572b75c'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_d07d4e9077ffd5c6'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-l..-enduser-deployment_31bf3856ad364e35_none_e7a0afe04c2afa02'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-s..ortedlanguage_en-us_31bf3856ad364e35_none_1b42f7e0ec877496'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_none_313230a19104b576'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-speech-iekillbits_31bf3856ad364e35_none_1e47a49eb1578e03'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-speech-pal-desktop_31bf3856ad364e35_none_d94db5616a8a4bcb'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-speechpal-desktop_31bf3856ad364e35_none_8f7fb44f221164ca'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_none_cd9d87acd163a64b'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_none_0ac8fd46871e4b89'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_none_e390228b2c5cacd0'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-t..tospeech-en-us-male_31bf3856ad364e35_none_f9f5cc95aa4aeb9d'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-texttospeech-en-us_31bf3856ad364e35_none_ff182e5b00b68f6f'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-texttospeech-ru-ru_31bf3856ad364e35_none_1780d9dcdbe0e436'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-voiceactivation-en-us_31bf3856ad364e35_none_e939f0fced17472d'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_windows-media-speech-winrt_31bf3856ad364e35_none_94ca5401ffe36123'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-onecore-s..chservice-component_31bf3856ad364e35_none_8c5dfb062cf09574'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-s..xperience.resources_31bf3856ad364e35_en-us_1809478f9a4f2b02'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-s..xperience.resources_31bf3856ad364e35_ru-ru_666774711f8780d3'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-s..zer-en-us-n-onecore_31bf3856ad364e35_none_3b86daf3c5657771'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-speech-pal-desktop_31bf3856ad364e35_none_e3a25fb39eeb0dc6'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-speechcommon-onecore_31bf3856ad364e35_none_c4f7955a8e81cdb2'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-speechcommonnoia64_31bf3856ad364e35_none_5ec6d76e0a4eaf4f'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-speechrecognizer-en-us_31bf3856ad364e35_none_d7f231ff05c46846'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-t..peech-en-us-onecore_31bf3856ad364e35_none_151da798bb7f0d84'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-t..peech-ru-ru-onecore_31bf3856ad364e35_none_ede4ccdd60bd6ecb'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-t..tospeech-en-us-male_31bf3856ad364e35_none_044a76e7deabad98'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-texttospeech-ru-ru_31bf3856ad364e35_none_21d5842f1041a631'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_windows-media-speech-winrt_31bf3856ad364e35_none_9f1efe543444231e'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\SideBySide\Winners\x86_microsoft-windows-speech-iekillbits_31bf3856ad364e35_none_c229091af8fa1ccd'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Speech-UserExperience/Diagnostic'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-TTS/Diagnostic'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{13480a22-d79f-4334-9d32-aa239398ad3c}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{74dcc47a-846e-4c98-9e2c-80043ed82b15}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.NpsmHelper'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.RemoteNaturalLanguage.GeoLocatorHelper'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoActivationBroker'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoCustomMarshaller'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoCustomMarshallerBroker'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.ShellHostBroker'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SpeechAuthManager'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SpeechNamedPipeBroker'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.VoiceActivationControllerBroker'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.SpeechRecognition.SystemSpeechRecognizerFactory'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.MediaMarkerTypes'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Internal.SoundController'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Internal.SpeechFocusManager'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Pal.CortanaAppManagement'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Pal.SpeechRecognitionShellHost'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.SpeechSettings'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.SpeechSupportedLanguageImplementation'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechPronunciation.SpeechLexiconManager'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechPronunciation.SpeechPronunciator'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognizer'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.VoiceCommandManager'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechSynthesis.SpeechSynthesizer'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{09C487E9-E4AD-4526-81F2-4946FB481D98}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{0BC3C9CB-C26A-40F2-AEB5-8096B2E48073}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{0FD498B8-3712-4B94-8F13-9F4560290D0D}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{13BD63D5-EBBE-4A31-BFF6-6626946982EE}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{3CEA7D32-1D90-4FE3-BB86-618F9EE59AEB}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{47D2D019-E3F9-47E8-8157-D63BB91F6155}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{5528b29d-4ac6-415d-b768-aa2bd9b629ea}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{5CB0ACC8-6CBA-45AB-AA35-79C08D6902F1}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{5FD48E77-48D0-4100-AA86-B06BA3BCEF47}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{63A49074-FCDF-43C8-A65E-830EE334FB6F}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{7642BB51-CC07-4E40-838B-E300CBDA9E8A}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{9B2172D2-6464-4E0A-9D35-E5F912C402F0}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{A3016360-B93C-4C32-9926-AA11C344908E}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{A579FF9E-6202-4074-A059-CF092D8CC356}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{A586296F-4843-4D7E-8FC6-F1F08F25D14D}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{A6232FBF-A6AD-45B7-A17F-A2A0FEA4E3B7}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{AEC3872C-889F-44F9-9FE8-83D625E53110}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{B5031A8F-85CA-4FA4-B11A-474FC41B3835}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{B87738A4-F0AF-494B-A252-3F6C1E731BF6}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{BB198040-482F-4743-8832-45853821ECE0}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{BF6FDF19-825D-4E69-A681-36E48CF1C93E}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{BFA8D821-A948-4BD9-8464-099A2684AD4D}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{C4CEB76B-5365-4E59-82A5-8CE2C6458E04}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{C91D3A4B-AB17-498A-967E-E72A877F3428}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{C9F72283-B6C2-4D13-B921-3934C6EB10D4}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{CABA494A-5C33-4B77-BEDC-D8C5545A6F3B}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{CE9F7C76-97F4-4CED-AD68-D51C458E45C6}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{D4BD8CD0-0E9C-40BA-9894-38CD5FAA0EE5}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{DBA44FB5-B80A-4CC2-933E-94FAC5A5A44A}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\CLSID\{FA766FEB-789F-44EE-B5E2-33BAA7F72651}'}
+  - !registryKey: {path: 'HKLM\Software\Microsoft\WindowsRuntime\Server\SpeechRuntime'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Internet Explorer\ActiveX Compatibility\{3BEE4890-4FE9-4A37-8C1E-5E7E12791C1F}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Internet Explorer\ActiveX Compatibility\{47206204-5ECA-11D2-960F-00C04F8EE628}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\AudioInput'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\AudioOutput'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\PhoneConverters'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\Recognizers'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\UserTokens'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\SPEECH\Voices'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\ArbitrationPolicies'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\AudioInput\TokenEnums'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\AudioOutput'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\AudioPolicy'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\CortanaVoices'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Locales'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\PhoneConverters'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Preferences'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Recognizers'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Service'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\ServiceLanguages'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Settings'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechBox'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechUX\Accessibility'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechUX\Experience'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechUX\Facility'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechUX\Grammars'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechUXPlugins'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\SpeechWinRT'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Test'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\UserTokens'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\UXLanguages'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\VC_VoiceCommandStore\VC_Staleness_Counters'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\VoiceAgent'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\Voices'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{D17D1D6D-CC3F-4815-8FE3-607E7D5D10B3}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.NpsmHelper'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.RemoteNaturalLanguage.GeoLocatorHelper'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoActivationBroker'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoCustomMarshaller'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SharedRecoCustomMarshallerBroker'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.ShellHostBroker'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SpeechAuthManager'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.SpeechNamedPipeBroker'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\NLInternal.VoiceActivationControllerBroker'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Internal.SpeechRecognition.SystemSpeechRecognizerFactory'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.MediaMarkerTypes'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Internal.SoundController'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Internal.SpeechFocusManager'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Pal.CortanaAppManagement'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.Pal.SpeechRecognitionShellHost'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.SpeechSettings'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.Speech.SpeechSupportedLanguageImplementation'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechPronunciation.SpeechLexiconManager'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechPronunciation.SpeechPronunciator'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.SpeechRecognizer'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechRecognition.VoiceCommandManager'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Media.SpeechSynthesis.SpeechSynthesizer'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{09C487E9-E4AD-4526-81F2-4946FB481D98}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{0BC3C9CB-C26A-40F2-AEB5-8096B2E48073}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{0FD498B8-3712-4B94-8F13-9F4560290D0D}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{13BD63D5-EBBE-4A31-BFF6-6626946982EE}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{3CEA7D32-1D90-4FE3-BB86-618F9EE59AEB}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{47D2D019-E3F9-47E8-8157-D63BB91F6155}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{5528b29d-4ac6-415d-b768-aa2bd9b629ea}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{5CB0ACC8-6CBA-45AB-AA35-79C08D6902F1}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{5FD48E77-48D0-4100-AA86-B06BA3BCEF47}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{63A49074-FCDF-43C8-A65E-830EE334FB6F}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{7642BB51-CC07-4E40-838B-E300CBDA9E8A}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{9B2172D2-6464-4E0A-9D35-E5F912C402F0}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{A3016360-B93C-4C32-9926-AA11C344908E}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{A579FF9E-6202-4074-A059-CF092D8CC356}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{A586296F-4843-4D7E-8FC6-F1F08F25D14D}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{A6232FBF-A6AD-45B7-A17F-A2A0FEA4E3B7}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{AEC3872C-889F-44F9-9FE8-83D625E53110}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{B5031A8F-85CA-4FA4-B11A-474FC41B3835}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{B87738A4-F0AF-494B-A252-3F6C1E731BF6}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{BB198040-482F-4743-8832-45853821ECE0}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{BF6FDF19-825D-4E69-A681-36E48CF1C93E}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{BFA8D821-A948-4BD9-8464-099A2684AD4D}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{C4CEB76B-5365-4E59-82A5-8CE2C6458E04}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{C91D3A4B-AB17-498A-967E-E72A877F3428}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{C9F72283-B6C2-4D13-B921-3934C6EB10D4}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{CABA494A-5C33-4B77-BEDC-D8C5545A6F3B}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{CE9F7C76-97F4-4CED-AD68-D51C458E45C6}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{D4BD8CD0-0E9C-40BA-9894-38CD5FAA0EE5}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{DBA44FB5-B80A-4CC2-933E-94FAC5A5A44A}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\CLSID\{FA766FEB-789F-44EE-B5E2-33BAA7F72651}'}
+  - !registryKey: {path: 'HKLM\Software\WOW6432Node\Microsoft\WindowsRuntime\Server\SpeechRuntime'}
+  - !registryKey: {path: 'HKLM\System\ActivationBroker\Plugins\{14F3C12D-7712-42CC-B7CC-64D2BB560C43}'}
+  - !registryKey: {path: 'HKLM\System\ActivationBroker\Plugins\{F48B770A-CBE5-44C2-8D4F-931DE9CEE6FA}'}
+  - !registryKey: {path: 'HKLM\System\ControlSet001\Services\EventLog\Application\SpeechRuntime'}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableDictation', value: 'msoobe.exe', data: ''}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableDictation', value: 'tabtip.exe', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableDictation', value: 'dwm.exe', operation: delete}
+
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableMSAA', value: 'msoobe.exe', data: ''}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableMSAA', value: 'devenv.exe', operation: delete}
+  - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Speech\Preferences\AppCompatDisableMSAA', value: 'taskmgr.exe', operation: delete}
+
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Speech_OneCore\Preferences', value: 'VoiceActivationOn', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Speech_OneCore\Preferences', value: 'VoiceActivationEnableAboveLockscreen', type: REG_DWORD, data: '0'}
+
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'SettingsPageVisibility', data: 'hide:easeofaccess-speechrecognition;speech'}
+
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp', value: '87C817672267397D_Speech_Recognition_lnk_amd64.lnk', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\CTF\TIP\{DCBD6FA8-032F-11D3-B5B1-00C04FC324A1', value: 'Enable', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Speech_OneCore\SpeechWinRT', value: 'EnableInprocRecognizer', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\CapabilityIndex\Language.Basic\Dependencies', value: 'Microsoft-Windows-LanguageFeatures-TextToSpeech-ru-ru-Package~31bf3856ad364e35~amd64~~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\CapabilityIndex\Language.Basic\Dependencies', value: 'Microsoft-Windows-LanguageFeatures-TextToSpeech-en-us-Package~31bf3856ad364e35~amd64~~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-Remote-Natural-Language-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-Remote-Natural-Language-WOW64-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-SpeechComponents-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~ru-RU~10.0.14393.0', operation: delete}
+  - !registryValue: {path: 'HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\PackageDetect\Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~~0.0.0.0', value: 'Microsoft-OneCore-SpeechComponents-WOW64-onecoreuap-Package~31bf3856ad364e35~amd64~en-US~10.0.14393.0', operation: delete}
+
+  - !registryValue: {path: 'HKLM\Software\WOW6432Node\Microsoft\Speech_OneCore\AudioInput', value: 'DefaultDefaultTokenId', operation: delete}
+
+  - !registryValue: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech\Preferences\AppCompatDisableDictation', value: 'msoobe.exe', data: ''}
+  - !registryValue: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech\Preferences\AppCompatDisableMSAA', value: 'msoobe.exe', data: ''}
+
+  - !registryValue: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech_OneCore\Preferences', value: 'VoiceActivationOn', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech_OneCore\Preferences', value: 'VoiceActivationEnableAboveLockscreen', type: REG_DWORD, data: '0'}
+
+  - !registryKey: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech', operation: add}
+  - !registryKey: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech\Preferences', operation: add}
+  - !registryKey: {path: 'HKU\.DEFAULT\Software\Microsoft\Speech_OneCore', operation: add}
+
+  - !run: {exeDir: true, exe: "disable-speechrecognition.bat", weight: 20}

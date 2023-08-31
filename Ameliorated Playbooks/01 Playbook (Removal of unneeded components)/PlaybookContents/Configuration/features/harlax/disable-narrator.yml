@@ -1,0 +1,14 @@
+---
+title: disable-narrator
+description: disable-narrator
+privilege: TrustedInstaller
+actions:
+    # ---------- Narrator
+  - !taskKill: {name: "Narrator"}
+
+  - !file: {path: '%windir%\System32\en-US\Narrator.exe.mui'}
+  - !file: {path: '%windir%\System32\DetailedReading-Default.xml'}
+  - !file: {path: '%windir%\System32\Narrator.exe'}
+  - !file: {path: '%windir%\System32\NarratorControlTemplates.xml'}
+
+  - !run: {exeDir: true, exe: "disable-narrator.bat", weight: 20}
