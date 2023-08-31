@@ -1,0 +1,63 @@
+REM ===================================================================
+REM NTUSER.DAT
+REM ===================================================================
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\BeforeChange\Snapshot1\NTUSER.DAT && ^
+reg export HKLM\OFFLINE_TEMP_PATH BeforeChange\Snapshot1\NtUserDat.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\AfterChange\Snapshot2\NTUSER.DAT && ^
+reg export HKLM\OFFLINE_TEMP_PATH AfterChange\Snapshot2\NtUserDat.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+..\regdiff.exe BeforeChange\Snapshot1\NtUserDat.reg AfterChange\Snapshot2\NtUserDat.reg >> RegDiffNtUserDat.txt
+
+REM ===================================================================
+REM COMPONENTS
+REM ===================================================================
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\BeforeChange\Snapshot1\COMPONENTS && ^
+reg export HKLM\OFFLINE_TEMP_PATH BeforeChange\Snapshot1\Components.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\AfterChange\Snapshot2\COMPONENTS && ^
+reg export HKLM\OFFLINE_TEMP_PATH AfterChange\Snapshot2\Components.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+..\regdiff.exe BeforeChange\Snapshot1\Components.reg AfterChange\Snapshot2\Components.reg >> ComponentsDiff.txt
+
+REM ===================================================================
+REM SCHEMA.DAT
+REM ===================================================================
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\BeforeChange\Snapshot1\SCHEMA.DAT && ^
+reg export HKLM\OFFLINE_TEMP_PATH BeforeChange\Snapshot1\Schema.dat.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\AfterChange\Snapshot2\SCHEMA.DAT && ^
+reg export HKLM\OFFLINE_TEMP_PATH AfterChange\Snapshot2\Schema.dat.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+..\regdiff.exe BeforeChange\Snapshot1\Schema.dat.reg AfterChange\Snapshot2\Schema.dat.reg >> Schema.datDiff.txt
+
+REM ===================================================================
+REM SOFTWARE
+REM ===================================================================
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\BeforeChange\Snapshot1\SOFTWARE && ^
+reg export HKLM\OFFLINE_TEMP_PATH BeforeChange\Snapshot1\Software.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+reg unload HKLM\OFFLINE_TEMP_PATH & ^
+reg load HKLM\OFFLINE_TEMP_PATH .\AfterChange\Snapshot2\SOFTWARE && ^
+reg export HKLM\OFFLINE_TEMP_PATH AfterChange\Snapshot2\Software.reg && ^
+reg unload HKLM\OFFLINE_TEMP_PATH
+
+..\regdiff.exe BeforeChange\Snapshot1\Software.reg AfterChange\Snapshot2\Software.reg >> SoftwareDiff.txt
