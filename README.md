@@ -139,6 +139,27 @@ disable-performancemonitor-resourcemonitor.bat
 disable-diskdefragmentation.bat
 disable-speechrecognition.bat
 ```
+## TODO's
+* :white_check_mark: Remove brave browser
+* :white_large_square: Remove revision tool
+* :white_check_mark: Remove UAC
+* :white_check_mark: Remove microsoft store
+* :white_check_mark: Remove snip and sketch
+* :white_check_mark: Remove your phone
+* :white_check_mark: Remove xbox and xbox game bar
+* :white_large_square: Remove windows security icon from the startup
+* :white_check_mark: Remove ease of access: narrator
+* :white_check_mark: Remove ease of access: windows speech recognition
+* :white_check_mark: Remove defragment and optimize drives
+* :white_check_mark: Remove performance monitor and resource monitor
+* :white_large_square: Remove print management
+* :white_check_mark: Remove windows accessories: character map
+* :white_large_square: Remove windows accessories: internet explorer
+* :white_large_square: Remove windows accessories: math input panel
+* :white_large_square: Remove windows accessories: quick assist
+* :white_check_mark: Remove windows accessories: snipping tool
+* :white_check_mark: Remove windows accessories: steps recorder
+* :white_large_square: Remove windows accessories: windows fax and scan 
 
 ## Contributing
 
