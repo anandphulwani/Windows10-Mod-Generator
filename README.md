@@ -159,7 +159,23 @@ disable-speechrecognition.bat
 * :white_large_square: Remove windows accessories: quick assist
 * :white_check_mark: Remove windows accessories: snipping tool
 * :white_check_mark: Remove windows accessories: steps recorder
-* :white_large_square: Remove windows accessories: windows fax and scan 
+* :white_large_square: Remove windows accessories: windows fax and scan
+* :white_large_square: Compare functionalities with `https://msendpointmgr.com/2021/02/02/remove-built-in-apps-for-windows-10-version-20h2/`
+* :white_large_square: Compare functionalities with `https://gist.github.com/rma92/b4d7b1c4d274a81091a7e7bee1749def`
+* :white_large_square: Compare functionalities with `https://github.com/shadesofdeath/ShadesToolkit`
+* :white_large_square: Compare functionalities with `https://forums.mydigitallife.net/threads/msmg-toolkit.50572/page-1283`
+* :white_large_square: Compare functionalities with `https://github.com/ChrisTitusTech/winutil`
+* :white_large_square: Compare functionalities with `https://github.com/canneverbe/Ketarin`
+
+## Comparison
+
+https://xsava.xyz/software/Windows.10.22H2.Build.19045.3271.Tweaked.Full.Apps.Office.2021.LTSC.July.2023.html
+https://manhpc.com/winpe-10-8-sergei-strelec-english-version/
+https://sm64pc.info/forum/viewtopic.php?t=159793&i=2
+
+## Sources
+
+* NTLite: https://rsload.net/soft/editor/24547-ntlite.html
 
 ## Contributing
 
